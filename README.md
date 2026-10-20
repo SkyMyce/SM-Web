@@ -92,7 +92,7 @@ site.config.js            the one config file (also shipped to the browser as as
 build.mjs                 static build, zero dependencies
 src/pages/**              page bodies; a <!--meta {...}--> JSON header sets title, description, layout and scripts
 src/data/                 docs.json (docs nav), media-slots.json, changelog.json, incidents.json
-src/assets/css/           site.css (design tokens and components), admin.css
+src/assets/css/           site.css (design tokens and components), admin.css, nojs.css (loaded in <noscript>)
 src/assets/js/            main (motion, nav, lightbox), core, auth, per-page modules, preview-data
 src/assets/img/           mark.svg (logo), favicons, og.png, cape textures
 src/assets/media/         screenshots and clips (see docs/CAPTURE-GUIDE.md)

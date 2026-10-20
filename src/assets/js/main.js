@@ -26,15 +26,15 @@ if (header) {
 
 // ---------- Copy buttons ----------
 function addCopy(target, getText, label = "Copy") {
-  const button = h("button", { class: "copy-btn", type: "button", "aria-label": `${label}: ${getText().slice(0, 60)}` }, "Copy");
+  const button = target.querySelector(".copy-btn") ?? target.appendChild(h("button", { class: "copy-btn", type: "button" }, "Copy"));
+  button.setAttribute("aria-label", `${label}: ${getText().slice(0, 60)}`);
   button.addEventListener("click", async () => {
     const ok = await copyText(getText());
     button.textContent = ok ? "Copied" : "Press Ctrl+C"; button.dataset.state = ok ? "done" : "";
     setTimeout(() => { button.textContent = "Copy"; delete button.dataset.state; }, 1600);
   });
-  target.append(button);
 }
-document.querySelectorAll(".code").forEach(block => addCopy(block, () => block.querySelector("pre").innerText.trim(), "Copy code"));
+document.querySelectorAll(".code").forEach(block => addCopy(block, () => block.querySelector("pre").textContent.trim(), "Copy code"));
 document.querySelectorAll(".cmd[data-copy]").forEach(chip => addCopy(chip, () => chip.dataset.copy, "Copy command"));
 
 // ---------- Reveal fallback (no scroll-driven animations) ----------

@@ -34,6 +34,7 @@ async function walk(dir) {
 // ---------- data ----------
 const slots = await json(join(SRC, "data/media-slots.json"));
 const docsNav = await json(join(SRC, "data/docs.json"));
+const changelog = await json(join(SRC, "data/changelog.json"));
 const docsFlat = docsNav.sections.flatMap(section => section.pages.map(page => ({ ...page, section: section.title })));
 
 // ---------- CSP ----------
@@ -140,7 +141,7 @@ function docsChrome(meta, body, urlPath) {
   body = body.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, "</table></div>");
   const toc = [];
   const used = new Set();
-  body = body.replace(/<h([23])(?![^>]*\bid=)([^>]*)>([\s\S]*?)<\/h\1>/g, (_, level, attrs, inner) => {
+  body = body.replace(/<h([23])(?![^>]*\b(?:id|data-noanchor)=)([^>]*)>([\s\S]*?)<\/h\1>/g, (_, level, attrs, inner) => {
     let id = slug(inner) || "section"; while (used.has(id)) id += "-x"; used.add(id);
     toc.push({ level, id, text: inner.replace(/<[^>]+>/g, "") });
     return `<h${level} id="${id}"${attrs}><a class="anchor" href="#${id}" aria-label="Link to this section">#</a>${inner}</h${level}>`;
@@ -207,6 +208,11 @@ for (const file of pages) {
     if (value === undefined) throw Error(`${rel}: unknown config token {{${path}}}`);
     return esc(value);
   });
+  // Release notes are rendered at build time (no layout shift); changelog.js only marks the live release.
+  body = body.replace("<changelog-list></changelog-list>", () => changelog.releases.map(r => `<li id="v${esc(r.version)}"><h2>${esc(r.version)} <time datetime="${esc(r.date)}">${new Date(r.date + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}</time></h2><ul>${r.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></li>`).join(""));
+  // Copy buttons are part of the markup so they never shift layout; main.js wires them up.
+  body = body.replace(/(<span class="cmd" data-copy="[^"]*">[\s\S]*?)(<\/span>)/g, '$1<button class="copy-btn" type="button">Copy</button>$2')
+    .replace(/(<div class="code"><pre>[\s\S]*?<\/pre>)(<\/div>)/g, '$1<button class="copy-btn" type="button">Copy</button>$2');
   body = body.replace(/<media-slot\s+id="([^"]+)"(?:\s+class="([^"]*)")?\s*><\/media-slot>/g, (_, id, cls) => mediaSlot(id, cls ?? ""));
   if (meta.layout === "docs") {
     const { html, toc } = docsChrome(meta, body, urlPath);
