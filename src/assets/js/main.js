@@ -50,15 +50,6 @@ if (!sda && reveals.length) {
 
 // ---------- Scroll-scrubbed pins + parallax fallback (one rAF loop, transform/opacity only) ----------
 const pins = [...document.querySelectorAll("[data-pin]")];
-pins.forEach(pin => {
-  const statement = pin.querySelector(".pin__statement");
-  if (!statement || statement.dataset.split) return;
-  const words = statement.textContent.trim().split(/\s+/);
-  statement.textContent = "";
-  words.forEach((word, i) => { const span = h("span", {}, word); span.style.setProperty("--i", i); statement.append(span, i < words.length - 1 ? " " : ""); });
-  statement.style.setProperty("--n", words.length);
-  statement.dataset.split = "1";
-});
 const parallax = sda ? [] : [...document.querySelectorAll(".parallax")];
 let ticking = false;
 function frame() {

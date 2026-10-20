@@ -104,7 +104,7 @@ function footer() {
   </div>
   <div class="site-footer__legal">
     <p>Not affiliated with Hypixel or Mojang. Players are responsible for following Hypixel's rules.</p>
-    <p><span>SkyMyce</span>${config.features.adminPanel ? ' · <a class="quiet-link" href="~/admin/">Team</a>' : ""}</p>
+    <ul class="readout"><li>SkyMyce</li><li><a href="~/changelog/">Changelog</a></li>${config.features.adminPanel ? '<li><a class="quiet-link" href="~/admin/">Team</a></li>' : ""}</ul>
   </div>
 </footer>`;
 }
@@ -125,7 +125,7 @@ function head(meta, urlPath) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(meta.description)}">
 ${noindex}<link rel="canonical" href="${esc(canonical)}">
-<meta name="theme-color" content="#07090d">
+<meta name="theme-color" content="#0b0f14">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website"><meta property="og:site_name" content="SkyMyce"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(meta.description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="SkyMyce: a client-side Fabric mod for Hypixel SkyBlock">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(meta.description)}"><meta name="twitter:image" content="${og}">
@@ -160,7 +160,7 @@ function docsChrome(meta, body, urlPath) {
     <nav class="docs-nav" id="docs-nav" aria-label="Docs sections">${sidebar}</nav>
   </aside>
   <article class="docs-article prose">
-    <p class="eyebrow">${esc(index >= 0 ? docsFlat[index].section : "Docs")}</p>
+    <p class="label">${esc(index >= 0 ? docsFlat[index].section : "Docs")}</p>
     <h1>${esc(meta.title)}</h1>
     ${meta.lead ? `<p class="lead">${meta.lead}</p>` : ""}
     ${body}
@@ -249,7 +249,7 @@ await writeFile(join(OUT, ".nojekyll"), "");
 if (config.customDomain) await writeFile(join(OUT, "CNAME"), config.customDomain + "\n");
 await writeFile(join(OUT, "manifest.webmanifest"), JSON.stringify({
   name: "SkyMyce", short_name: "SkyMyce", description: "A client-side Fabric mod for Hypixel SkyBlock.",
-  start_url: "./", scope: "./", display: "browser", background_color: "#07090d", theme_color: "#07090d",
+  start_url: "./", scope: "./", display: "browser", background_color: "#0b0f14", theme_color: "#0b0f14",
   icons: [{ src: "assets/img/icon-192.png", sizes: "192x192", type: "image/png" }, { src: "assets/img/icon-512.png", sizes: "512x512", type: "image/png" },
     { src: "assets/img/favicon.svg", sizes: "any", type: "image/svg+xml" }],
 }, null, 2));

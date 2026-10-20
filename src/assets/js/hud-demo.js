@@ -1,81 +1,78 @@
-// Home hero: cycles the HUD recreation through five stages. Pauses off-screen, on hover/focus and
-// on request (WCAG 2.2.2). With reduced motion it never auto-advances; the tabs still work.
+// Home hero: the HUD recreation is pinned and its five stages follow the scroll position. The tour
+// buttons are real tabs: with motion they scroll to a stage, with reduced motion they switch it
+// directly and the scene starts as one static composition. Nothing auto-advances (WCAG 2.2.2).
 import { reducedMotion } from "./core.js";
 
-const demo = document.querySelector("[data-hud-demo]");
-if (demo) {
-  const scene = demo.querySelector(".hud-scene");
-  const tabs = [...demo.querySelectorAll("[data-stage-btn]")];
-  const caption = demo.querySelector("[data-hud-caption]");
-  const pause = demo.querySelector("[data-hud-pause]");
-  const ability = demo.querySelector("[data-hud-ability]");
-  const health = demo.querySelector("[data-hud-health]"), healthText = demo.querySelector("[data-hud-health-text]");
-  const mana = demo.querySelector("[data-hud-mana]"), xp = demo.querySelector("[data-hud-xp]");
-  const INTERVAL = 4800;
+const hero = document.querySelector("[data-hero]");
+if (hero) {
+  const scene = hero.querySelector(".hud-scene");
+  const tabs = [...hero.querySelectorAll("[data-stage-btn]")];
+  const caption = hero.querySelector("[data-hud-caption]");
+  const hint = hero.querySelector("[data-hud-hint]");
+  const ability = hero.querySelector("[data-hud-ability]");
+  const health = hero.querySelector("[data-hud-health]"), mana = hero.querySelector("[data-hud-mana]"), xp = hero.querySelector("[data-hud-xp]");
   const CAPTIONS = {
+    all: ["The HUD, as the mod draws it.", "Tracker, status bars, XP and the Bazaar Assistant, each a widget you can move in /sm hud."],
     tracker: ["Dungeon Tracker.", "Runs, chests, profit estimates and Catacombs XP per hour, with how far you are from your target level."],
     bars: ["Status bars, ability timer, skill XP.", "Separate health, mana, defense and speed bars around the hotbar, a held-item cooldown and XP progress."],
     bazaar: ["Bazaar Assistant.", "The next step in words, and a highlight only when exactly one button matches. You do the clicking."],
     party: ["Party Finder Matcher.", "Listings that do not fit your class or PB limit are marked. Nothing is hidden or clicked for you."],
     menu: ["The /sm menu.", "Six areas, search across every setting, and a switch for each feature."],
   };
-  let index = 0, timer = 0, userPaused = reducedMotion(), hovering = false, visible = true, cooldown = 4, tick = 0;
-  demo.style.setProperty("--hud-interval", `${INTERVAL}ms`);
+  const motion = !reducedMotion();
+  let index = -1, cooldownTimer = 0;
 
-  function show(i, focusTab = false) {
-    index = (i + tabs.length) % tabs.length;
-    const stage = tabs[index].dataset.stageBtn;
+  function setStage(i) {
+    index = i;
+    const stage = i < 0 ? "all" : tabs[i].dataset.stageBtn;
     scene.dataset.stage = stage;
-    tabs.forEach((tab, n) => { tab.setAttribute("aria-selected", String(n === index)); tab.tabIndex = n === index ? 0 : -1; });
-    // Restart the progress animation on the selected tab.
-    const bar = tabs[index].querySelector(".progress"); bar.style.animation = "none"; void bar.offsetWidth; bar.style.animation = "";
+    tabs.forEach((tab, n) => { tab.setAttribute("aria-selected", String(n === i)); tab.tabIndex = n === i || (i < 0 && n === 0) ? 0 : -1; });
     caption.replaceChildren(Object.assign(document.createElement("strong"), { textContent: CAPTIONS[stage][0] }), " " + CAPTIONS[stage][1]);
-    if (focusTab) tabs[index].focus();
-    if (stage === "bars") { cooldown = 4; animateBars(); }
-    schedule();
+    clearInterval(cooldownTimer);
+    if (stage === "bars" || stage === "all") {
+      health.style.setProperty("--fill", ".9"); mana.style.setProperty("--fill", ".77"); xp.style.setProperty("--xp", ".86");
+      let cooldown = 4;
+      ability.textContent = "Cooldown: 4s"; ability.className = "r";
+      // A finite countdown: four ticks, then "Ability Ready!" and it stops.
+      if (motion) cooldownTimer = setInterval(() => {
+        cooldown--;
+        ability.textContent = cooldown > 0 ? `Cooldown: ${cooldown}s` : "Ability Ready!";
+        ability.className = cooldown > 0 ? "r" : "g";
+        if (cooldown <= 0) clearInterval(cooldownTimer);
+      }, 1000);
+    }
   }
-  function animateBars() {
-    health.style.setProperty("--fill", ".9"); mana.style.setProperty("--fill", ".77"); xp.style.setProperty("--xp", ".86");
-    ability.textContent = "Cooldown: 4s"; ability.className = "r";
-  }
-  const running = () => !userPaused && !hovering && visible;
-  function schedule() {
-    clearTimeout(timer);
-    demo.classList.toggle("is-paused", !running());
-    if (running()) timer = setTimeout(() => show(index + 1), INTERVAL);
-  }
-  // A one-second tick drives the cooldown and the small bar changes while the "bars" stage is visible.
-  setInterval(() => {
-    if (!running() || scene.dataset.stage !== "bars") return;
-    tick++;
-    cooldown = Math.max(0, cooldown - 1);
-    ability.textContent = cooldown ? `Cooldown: ${cooldown}s` : "Ability Ready!";
-    ability.className = cooldown ? "r" : "g";
-    health.style.setProperty("--fill", tick % 2 ? ".74" : ".9");
-    healthText.textContent = tick % 2 ? "❤ 3,140 / 4,250" : "❤ 3,820 / 4,250";
-  }, 1000);
 
+  // Scroll binding: progress through the pinned hero picks the stage.
+  const span = () => Math.max(1, hero.offsetHeight - innerHeight);
+  let ticking = false;
+  function frame() {
+    ticking = false;
+    const p = Math.min(1, Math.max(0, -hero.getBoundingClientRect().top / span()));
+    const i = Math.min(tabs.length - 1, Math.floor(p * tabs.length));
+    if (i !== index) setStage(i);
+    hint.hidden = p > .02;
+  }
+  if (motion) {
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+    addEventListener("resize", frame, { passive: true });
+    frame();
+  } else {
+    hint.hidden = true;
+    setStage(-1);
+  }
+
+  const go = (i, focus = false) => {
+    i = (i + tabs.length) % tabs.length;
+    if (motion) scrollTo({ top: hero.offsetTop + ((i + .5) / tabs.length) * span(), behavior: "smooth" });
+    else setStage(i);
+    if (focus) tabs[i].focus();
+  };
   tabs.forEach((tab, n) => {
-    tab.addEventListener("click", () => show(n));
+    tab.addEventListener("click", () => go(n));
     tab.addEventListener("keydown", event => {
-      const move = { ArrowRight: 1, ArrowLeft: -1, Home: -n, End: tabs.length - 1 - n }[event.key];
-      if (move !== undefined) { event.preventDefault(); show(n + move, true); }
+      const target = { ArrowRight: n + 1, ArrowDown: n + 1, ArrowLeft: n - 1, ArrowUp: n - 1, Home: 0, End: tabs.length - 1 }[event.key];
+      if (target !== undefined) { event.preventDefault(); go(target, true); }
     });
   });
-  const setPaused = paused => {
-    userPaused = paused;
-    pause.setAttribute("aria-label", paused ? "Play the tour" : "Pause the tour");
-    pause.innerHTML = paused ? '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z"/></svg>'
-      : '<svg viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1"/><rect x="8.5" y="1" width="3.5" height="12" rx="1"/></svg>';
-    schedule();
-  };
-  pause.addEventListener("click", () => setPaused(!userPaused));
-  demo.addEventListener("pointerenter", () => { hovering = true; schedule(); });
-  demo.addEventListener("pointerleave", () => { hovering = false; schedule(); });
-  demo.addEventListener("focusin", () => { hovering = true; schedule(); });
-  demo.addEventListener("focusout", event => { if (!demo.contains(event.relatedTarget)) { hovering = false; schedule(); } });
-  new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; schedule(); }, { threshold: .25 }).observe(scene);
-  document.addEventListener("visibilitychange", () => { visible = !document.hidden; schedule(); });
-  setPaused(userPaused);
-  show(0);
 }
