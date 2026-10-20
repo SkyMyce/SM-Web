@@ -1,0 +1,72 @@
+<!--meta {"title": "Goldor coordination", "description": "SkyMyce Goldor coordination for F7 and M7 phase 3: terminal map, per-class steps from the gold-standard strategy, conditions and timed pre-leaps.", "nav": "docs", "page": "docs", "layout": "docs", "updated": "2026-10-20", "lead": "SkyMyce tracks phase 3's terminals, devices, levers and early-enter routes, and recommends the next action for your class: what to do, who to stack with and when to pre-leap."} -->
+<h2>How it knows what is happening</h2>
+<p>It combines three things:</p>
+<ul>
+  <li>what your client sees: chat lines, your own terminal windows and loaded player positions;</li>
+  <li>short <code>smt1:</code> updates that other SkyMyce users post in <strong>party chat</strong>;</li>
+  <li>the selected strategy profile.</li>
+</ul>
+<p>It never clicks, moves or leaps for you. Party chat is its only transport; the SkyMyce relay is not used.</p>
+
+<h2>Set it up</h2>
+<ol>
+  <li>Turn on <strong>Dungeons → Boss → Goldor Coordination</strong>. The strategy is Gold standard by default.</li>
+  <li>Add the <strong>Goldor Map</strong> widget in the HUD editor (<code>/sm hud</code>).</li>
+  <li>In a run, check the state at any time with <code>/sm goldor</code>.</li>
+</ol>
+<media-slot id="docs/goldor/map"></media-slot>
+
+<h2>Gold standard at a glance</h2>
+<p>The default profile gives each class its own S1 to S4 steps. Each step is marked as prep, required, conditional, optional, recovery or reminder. Text in italics applies only when its condition holds.</p>
+<table>
+  <thead><tr><th>Section</th><th>Tank</th><th>Berserker</th><th>Healer</th><th>Mage</th><th>Archer</th></tr></thead>
+  <tbody>
+    <tr><td>S1</td><td>T2, then T1, Last Breath once → pre-leap Mage</td><td>Last Breath, i4 → leap Tank → stack Tank → pre-leap Mage</td><td>SS → leap the EE2 player</td><td>left lever, right lever, gate, lights (S2 device) → hold EE2</td><td>T4, then T3 → leap Mage</td></tr>
+    <tr><td>S2</td><td>T1 → leap Berserker → stack T3 (<em>if T3 is taken and not Melody: right lever instead</em>) → leap Healer</td><td>T5, then T3 (<em>if Archer has Melody: right lever too</em>) → leap Healer</td><td>high (left) lever (<em>slow party: right lever too</em>) → gate → HEE3 spot</td><td>T2 → into core, back half of the gray carpet</td><td>T4, bottom (right) lever → leap Healer (<em>Mask left: pre-leap now; none: after S2</em>)</td></tr>
+    <tr><td>S3</td><td>T1 → leap Archer → stack the levers, gate → leap Mage</td><td>T3, device (<em>Archer and Tank slow: levers</em>) → leap Mage</td><td>T2, device only if Berserker has not done it (<em>Archer and Tank slow: levers</em>) → leap Mage</td><td>core: SOS flare, LCM, Ragnarock</td><td>T4, left lever + Explosive Shot gate, right lever → leap Mage</td></tr>
+    <tr><td>S4</td><td>T1 (<em>Berserker failed i4: T3 too</em>) → leap Mage</td><td>T3, bottom lever, top lever → leap Mage</td><td>T4, right (top) lever, left (bottom) lever unless Berserker has it or it is done → leap Mage</td><td>re-enter core at the door corner, dig, Ragnarock</td><td>T2 → leap Mage → Ragnarock</td></tr>
+  </tbody>
+</table>
+<p><strong>S4 lever sides</strong> follow the map: right is the top lever, left is the bottom one.</p>
+<p>Read your class's full steps in chat:</p>
+<div class="code"><pre>/sm goldor guide mage s2</pre></div>
+<media-slot id="docs/goldor/guide"></media-slot>
+
+<h2>Profiles</h2>
+<ul>
+  <li><strong>Gold standard</strong> (default): the baseline above, for F7 and M7.</li>
+  <li><strong>Gold standard, Archer EE2</strong>: the same baseline for parties where Archer runs EE2. Only the EE2 runner and the S1 leap target change.</li>
+  <li><strong>SkyMyce ADG</strong>: the default before 2.7.26. It differs from the baseline in S1 order, Berserker's S2 order (T4 then T3) and the S3 device stack.</li>
+</ul>
+
+<h2>Conditions</h2>
+<p>Some steps depend on what happens in the run. An unknown condition is never shown as true or false: the HUD writes "If …" until it is seen or you confirm it. Confirmations last for the run.</p>
+<table>
+  <thead><tr><th>Condition</th><th>Used by</th><th>How it is known</th></tr></thead>
+  <tbody>
+    <tr><td><code>t3-taken</code></td><td>Tank S2</td><td>A SkyMyce user shares the T3 puzzle, or T3 is known to be complete</td></tr>
+    <tr><td><code>archer-melody</code></td><td>Berserker S2</td><td>Archer's shared S2 puzzle</td></tr>
+    <tr><td><code>i4-failed</code></td><td>Tank S4</td><td>Only your confirmation; a known i4 completion rules it out</td></tr>
+    <tr><td><code>ss-reset</code></td><td>Mage S1, Healer S1</td><td>A party member writes "SS reset", "SSRS" or "SS failed"</td></tr>
+    <tr><td><code>slow-party</code></td><td>Healer S2</td><td>You confirm</td></tr>
+    <tr><td><code>ee2-failed</code></td><td>Healer S2</td><td>You confirm</td></tr>
+    <tr><td><code>slow-levers</code></td><td>Healer and Berserker S3</td><td>You confirm; ruled out once both levers are done</td></tr>
+    <tr><td><code>mask</code></td><td>Archer S2</td><td>You confirm; both branches show until then</td></tr>
+    <tr><td><code>mage-direct</code></td><td>Berserker S1</td><td>You confirm a direct leap to Mage is safe</td></tr>
+    <tr><td><code>dying</code></td><td>Healer S2, Archer S2</td><td>You confirm</td></tr>
+  </tbody>
+</table>
+<p>List them all with their current values:</p>
+<div class="code"><pre>/sm goldor if</pre></div>
+<p>Confirm one:</p>
+<div class="code"><pre>/sm goldor if mask yes</pre></div>
+
+<h2>Gates and the Goldor tick</h2>
+<p>The map moves to the next section when Goldor's gate line appears once a section is complete. If no line appears, it switches six seconds after the last completion. The Goldor tick (every three seconds through the phase) is tracked so pre-leap timings line up.</p>
+
+<h2>Fixing the state</h2>
+<ul>
+  <li><code>/sm goldor role &lt;player&gt; &lt;class&gt;</code> sets a teammate's class; <code>/sm goldor unrole &lt;player&gt;</code> clears it.</li>
+  <li><code>/sm goldor section &lt;s1|s2|s3|s4|core&gt;</code> corrects the current section.</li>
+  <li><code>/sm goldor learned</code> shows learned teammate roles; add <code>reset</code> to clear them.</li>
+</ul>

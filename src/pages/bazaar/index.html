@@ -1,0 +1,108 @@
+<!--meta {"title": "Bazaar", "description": "SkyMyce Bazaar tools: ranked flip ideas, a private profit ledger and the Bazaar Assistant, which guides each step. You place, claim and confirm every trade yourself.", "nav": "bazaar", "page": "bazaar"} -->
+<section class="pin pin--gold" data-pin aria-labelledby="page-title">
+  <div class="pin__sticky">
+    <div class="pin__glow" aria-hidden="true"></div>
+    <div class="pin__content">
+      <p class="eyebrow">Bazaar</p>
+      <h1 class="pin__statement" id="page-title">You do every trade yourself.</h1>
+      <p class="pin__sub">SkyMyce suggests flips, keeps your profit history and points at the next step. It never places, changes, cancels or claims an order.</p>
+    </div>
+    <p class="pin__hint" aria-hidden="true">Scroll</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="safety-title">
+  <div class="wrap">
+    <h2 class="sr-only" id="safety-title">Safety boundaries</h2>
+    <div class="pillars reveal" data-stagger>
+      <div class="pillar"><p class="pillar__num">0</p><h3>Orders placed for you</h3><p>Nothing clicks slots, moves the mouse, confirms orders or submits signs.</p></div>
+      <div class="pillar"><p class="pillar__num" data-count="1">1</p><h3>Highlight, only when certain</h3><p>A button is highlighted only when exactly one slot matches and still shows that item.</p></div>
+      <div class="pillar"><p class="pillar__num" data-count="73">73</p><h3>In-game test checks</h3><p>The project's client test drives the real assistant through Bazaar menus, signs and chat.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <article class="feature-row" id="flips">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Flip finder</p>
+      <h2>Steady, Balanced or Bold.</h2>
+      <p>Pick a risk profile and get ranked flips for your purse. Each card shows the estimated profit after tax, the coins needed and a rough fill time. <strong>Details</strong> explains every number.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="bazaar/flips"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="terminal">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">The terminal</p>
+      <h2>Four numbers, never added together.</h2>
+      <p>Purse, coins in buy orders, inventory cost and realized profit, side by side. Realized profit is coins received after tax minus what those items cost, first in, first out. Unsold items and forecasts never count.</p>
+      <ul><li><strong>Flips</strong> ranked suggestions</li><li><strong>Positions</strong> what you are flipping and the next step for each</li><li><strong>History</strong> realized profit, ROI and completed sales</li><li><strong>Replays</strong> private recordings of each session</li><li><strong>More</strong> the assistant, alerts, dashboard, export and delete</li></ul>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="bazaar/terminal"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="assistant">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Bazaar Assistant</p>
+      <h2>One flip, one step at a time.</h2>
+      <p>Buy order, claim, sell offer, claim. A panel beside the menu says what to do next and the button to click glows, but only when there is exactly one match. In chat the expected command appears as ghost text; press Tab to fill it, and mistyped characters turn red.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="bazaar/assistant-highlight"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="signs">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Sign helper</p>
+      <h2>Green when it's right. You click Done.</h2>
+      <p>On Bazaar signs the expected search, amount or price shows above the sign and turns green once what you typed matches. Enter only moves to the next line; submitting stays your click.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="bazaar/assistant-sign"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="replays">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Replays &amp; dashboard</p>
+      <h2>Review a session in your browser.</h2>
+      <p>Every session is recorded privately. Watch it in a dashboard served only on your computer, which shuts down two minutes after you close it. Publishing a replay is always a separate choice, with redaction options.</p>
+      <p><code>/sm bazaar dashboard</code></p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="bazaar/dashboard"></media-slot></div></div>
+  </article>
+</div>
+
+<section class="section" aria-labelledby="helpers-title">
+  <div class="wrap--narrow">
+    <p class="eyebrow reveal">Opt-in helpers</p>
+    <h2 class="h2 reveal" id="helpers-title">Two helpers, off by default.</h2>
+    <p class="section-lead reveal">Both are explained before you can turn them on. Hypixel's rules on client modifications apply to you; leave them off if you're unsure.</p>
+    <div class="grid grid--2" data-stagger>
+      <div class="card reveal"><h3>Auto Command</h3><p>Press its key (unbound until you set one) to send the one command the current step shows. One press, one command, only with no menu open, and never twice within three seconds. It never runs commands from chat, lore or server messages.</p></div>
+      <div class="card reveal"><h3>Auto Sign</h3><p>Types the expected value into an empty Bazaar sign once. You still check it and click Done yourself.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="cmd-title">
+  <div class="wrap">
+    <h2 class="h3 reveal" id="cmd-title">Commands</h2>
+    <div class="cmd-strip reveal" data-stagger>
+      <span class="cmd" data-copy="/sm bazaar">/sm bazaar <small>Open the terminal</small></span>
+      <span class="cmd" data-copy="/sm bazaar off">/sm bazaar off <small>Stop flipping</small></span>
+      <span class="cmd" data-copy="/sm bazaar assist">/sm bazaar assist [start|stop] <small>Assistant</small></span>
+      <span class="cmd" data-copy="/sm bazaar cycle">/sm bazaar cycle <small>Next position on the HUD</small></span>
+      <span class="cmd" data-copy="/sm bazaar dashboard">/sm bazaar dashboard <small>Private dashboard</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="more-title">
+  <div class="wrap">
+    <h2 class="h3 reveal" id="more-title">Keep going</h2>
+    <div class="cross-links" data-stagger>
+      <a class="card card--link reveal" href="~/docs/bazaar/"><h3>Your first flip</h3><p>A step-by-step walkthrough of the terminal and assistant.</p></a>
+      <a class="card card--link reveal" href="~/privacy/"><h3>Privacy</h3><p>Your trading history stays on this device.</p></a>
+      <a class="card card--link reveal" href="~/everyday/"><h3>Everyday QoL</h3><p>Price history, sign Enter and other small helpers.</p></a>
+    </div>
+  </div>
+</section>

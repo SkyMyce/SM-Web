@@ -1,0 +1,54 @@
+<!--meta {"title": "Dungeons", "description": "How the SkyMyce dungeon tools work: Party Finder matching, instance helpers, chest protection and profit, win screen, routing, Crush Camera and Spirit Leap menu.", "nav": "docs", "page": "docs", "layout": "docs", "updated": "2026-10-20", "lead": "Each tool is a separate switch under <strong>Dungeons</strong> in <code>/sm</code>. Turn on the ones you want; none of them clicks, moves or plays for you."} -->
+<h2>Party Finder</h2>
+<p>The Party Finder Matcher marks dungeon listings that don't fit your class needs or your floor and PB requirements. Mismatches stay visible and clickable, so you always make the final choice.</p>
+<p>Set what you are looking for under <strong>Dungeons → Parties → Party Finder</strong>:</p>
+<ul>
+  <li><strong>Dungeon Availability</strong>: your floor, the classes you play and a join PB limit.</li>
+  <li><strong>LFG Message Template</strong>: the text of the friend Message action, with name, class and floor placeholders.</li>
+  <li><strong>Title Notifications</strong>: show invitations and joining players as titles.</li>
+</ul>
+<p>Open dungeon friends and LFG with:</p>
+<div class="code"><pre>/sm pf</pre></div>
+<media-slot id="docs/dungeons/party-finder-settings"></media-slot>
+
+<h2>Instance helpers</h2>
+<p>Under <strong>Combat → Instances</strong>:</p>
+<ul>
+  <li><strong>Missing-player alerts</strong> warn you when a party member hasn't entered the instance.</li>
+  <li><strong>Auto requeue</strong> gets you into the next run when one ends.</li>
+</ul>
+<p>Both work for dungeon and Kuudra parties.</p>
+<media-slot id="dungeons/requeue"></media-slot>
+
+<h2>Reward chests</h2>
+<p><strong>Dungeon Chests</strong> (Dungeons → Rewards) shows an estimated profit for each chest and protects you from accidental purchases and rerolls when a chest holds something valuable. Values come from current Bazaar and auction prices. They are estimates, and an item without a known price is shown as unknown rather than as zero.</p>
+<media-slot id="dungeons/chest-profit"></media-slot>
+
+<h2>Win screen and chat filter</h2>
+<p><strong>Dungeon Win Screen</strong> shows a summary overlay after a completed run. <strong>Dungeon Chat Filter</strong> lets you choose which dungeon messages remain visible.</p>
+
+<h2>Routing</h2>
+<p><strong>Dungeon Routing</strong> draws a line through the doors toward Blood, optionally visiting starred mobs. Its settings are grouped as:</p>
+<ul>
+  <li><strong>Route</strong>: enable, Blood routing for rush classes only (Mage, Archer and Healer by default), route through mobs or starred minibosses, show the route.</li>
+  <li><strong>Mob markers</strong>: targets, numbers and cleared markers.</li>
+  <li><strong>Appearance</strong>: thickness, opacity and line height.</li>
+</ul>
+<p>Check what the router is doing with:</p>
+<div class="code"><pre>/sm route status</pre></div>
+<media-slot id="docs/dungeons/routing-settings"></media-slot>
+
+<h2>Healer Crush Camera</h2>
+<p>Fixed, class-specific viewpoints from 26 seconds into the Storm phase until Storm dies. Save viewpoints and check them in the preview:</p>
+<div class="code"><pre>/sm crush-camera</pre></div>
+<div class="callout callout--warn"><p><strong>Calibrate first.</strong> Test the camera in the preview before you rely on it in a live run.</p></div>
+
+<h2>Spirit Leap menu</h2>
+<p>A clearer Spirit Leap menu with teammate previews, so you can choose who to leap to. Turn it on under <strong>Dungeons → Parties → Spirit Leap Menu</strong>.</p>
+
+<h2>Goldor</h2>
+<p>Goldor coordination for F7 and M7 phase 3 has its own page: <a href="~/docs/goldor/">Goldor coordination</a>.</p>
+
+<h2>Personal bests</h2>
+<p>Look up a selected-profile M7 personal best for yourself or a player:</p>
+<div class="code"><pre>/sm m7pb</pre></div>

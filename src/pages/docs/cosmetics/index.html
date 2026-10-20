@@ -1,0 +1,29 @@
+<!--meta {"title": "Cosmetics Studio", "description": "Design a display name, player size and cape in SkyMyce Cosmetics Studio, and choose whether to share it with other SkyMyce players.", "nav": "docs", "page": "docs", "layout": "docs", "updated": "2026-10-20", "lead": "Cosmetics Studio changes how players look in your game. Saving a look is local; sharing it so other SkyMyce players see it is a separate, optional step."} -->
+<h2>Open the studio</h2>
+<div class="code"><pre>/sm cosmetics</pre></div>
+<media-slot id="docs/cosmetics/studio"></media-slot>
+
+<h2>Display name</h2>
+<p>Type plain text, or paste Minecraft text-component JSON for colours and styles. Names are limited to keep them readable and safe:</p>
+<ul>
+  <li>Up to 32 visible characters, not blank and without leading or trailing spaces.</li>
+  <li>Letters, numbers, common symbols and simple separators.</li>
+  <li>Colours by Minecraft name (for example <code>aqua</code> or <code>gold</code>) or as <code>#RRGGBB</code>.</li>
+  <li>Bold, italic, underlined and strikethrough. No click events, fonts or translations.</li>
+</ul>
+<div class="code"><pre>[{"text":"Sky","color":"aqua","bold":true},{"text":"Rat","color":"#b59be6"}]</pre></div>
+
+<h2>Size</h2>
+<p>Scale a player between 0.1 and 3.0, separately for width, height and depth if you want. The nametag has its own scale from 0.5 to 2.0.</p>
+
+<h2>Capes</h2>
+<p>Pick one of four presets (SkyMyce, Forest, Sunset, Void) or upload your own:</p>
+<ul>
+  <li>PNG, exactly 64 × 32 pixels, up to 256 KiB.</li>
+  <li>Up to 8 custom capes, 2 MiB in total.</li>
+  <li>Uploads are checked before they are stored; animated or malformed PNGs are rejected.</li>
+</ul>
+
+<h2>Sharing</h2>
+<p>To let other SkyMyce players see your look, connect Discord (<a href="~/docs/community/">Community &amp; Discord</a>) and share from the studio. <code>/sm cosmetics link</code> opens the linking step directly. Shared cosmetics are public rendering data: your chosen name, sizes and cape. Your real IGN stays authoritative everywhere else.</p>
+<p>Browse what others have shared in the <a href="~/community/cosmetics/">cosmetics gallery</a>.</p>

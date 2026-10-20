@@ -1,0 +1,44 @@
+<!--meta {"title": "Team console", "description": "SkyMyce team console.", "nav": "", "page": "admin", "layout": "admin", "noindex": true, "styles": ["admin"], "scripts": ["admin"]} -->
+<div class="adm" data-admin>
+  <header class="adm-top">
+    <a class="brand" href="~/" aria-label="SkyMyce home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="~/assets/img/mark.svg#mark"></use></svg><span>SkyMyce</span></a>
+    <span class="adm-top__title">Team console</span>
+    <div class="adm-top__right" data-adm-session></div>
+  </header>
+  <div class="adm-banner" data-adm-banner hidden></div>
+
+  <section class="adm-gate" data-adm-gate hidden aria-labelledby="gate-title">
+    <h1 id="gate-title">Team console</h1>
+    <p>Sign in with Discord. The relay checks your team permission on every request; this page only hides controls you can't use.</p>
+    <div class="btn-row" data-adm-gate-actions></div>
+    <p class="subtle" data-adm-gate-note></p>
+  </section>
+
+  <div class="adm-shell" data-adm-shell hidden>
+    <nav class="adm-rail" aria-label="Console sections">
+      <a href="#/overview" data-route="overview"><kbd>1</kbd>Overview</a>
+      <a href="#/players" data-route="players"><kbd>2</kbd>Players</a>
+      <a href="#/reports" data-route="reports"><kbd>3</kbd>Reports</a>
+      <a href="#/chat" data-route="chat"><kbd>4</kbd>Chat moderation</a>
+      <a href="#/cosmetics" data-route="cosmetics"><kbd>5</kbd>Cosmetics</a>
+      <a href="#/blacklist" data-route="blacklist"><kbd>6</kbd>Blacklist</a>
+      <a href="#/audit" data-route="audit"><kbd>7</kbd>Audit log</a>
+      <p class="adm-rail__hint">Keys: <kbd>1</kbd>–<kbd>7</kbd> sections, <kbd>/</kbd> filter, <kbd>j</kbd>/<kbd>k</kbd> rows, <kbd>Enter</kbd> open, <kbd>Esc</kbd> close</p>
+    </nav>
+    <main class="adm-main" id="main" tabindex="-1" data-adm-main></main>
+  </div>
+
+  <aside class="adm-drawer" data-adm-drawer hidden aria-labelledby="drawer-title" role="dialog" aria-modal="false">
+    <div class="adm-drawer__head"><h2 id="drawer-title" data-adm-drawer-title>Details</h2><button class="btn btn--ghost btn--sm" type="button" data-adm-drawer-close>Close</button></div>
+    <div class="adm-drawer__body" data-adm-drawer-body></div>
+  </aside>
+
+  <dialog class="adm-confirm" data-adm-confirm aria-labelledby="confirm-title">
+    <form method="dialog">
+      <h2 id="confirm-title" data-adm-confirm-title>Confirm</h2>
+      <p data-adm-confirm-text></p>
+      <label class="field" data-adm-confirm-reason-wrap hidden><span>Reason (recorded in the audit log)</span><input class="input" data-adm-confirm-reason maxlength="200"></label>
+      <div class="btn-row"><button class="btn btn--ghost" value="cancel" type="submit">Cancel</button><button class="btn btn--danger" value="ok" type="submit" data-adm-confirm-ok>Confirm</button></div>
+    </form>
+  </dialog>
+</div>

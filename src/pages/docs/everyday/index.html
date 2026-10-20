@@ -1,0 +1,48 @@
+<!--meta {"title": "Everyday QoL", "description": "SkyMyce everyday helpers: Daily Digest, Auto Refill, stash value filter, loadout keybinds, status bars, NPC dialogue, sign Enter, skill XP, ability cooldowns and price history.", "nav": "docs", "page": "docs", "layout": "docs", "updated": "2026-10-20", "lead": "Small helpers you switch on one by one. Each lives in <code>/sm</code>; use Search if you can't find one."} -->
+<h2>Daily Digest</h2>
+<p>A daily snapshot of news, event updates, mayor information and your personal dailies, with optional community RNG reports. Open it with:</p>
+<div class="code"><pre>/sm digest</pre></div>
+<p>Personal Digest history stays local.</p>
+
+<h2>Auto Refill</h2>
+<p>Under <strong>Utils → Inventory → Auto Refill</strong>, choose which consumable items refill from your sack when a stack runs out.</p>
+
+<h2>Stash value filter</h2>
+<p><strong>Economy → Item Values → Stash Value Filter</strong> filters low-value stash items using current prices and prevents unwanted pickups.</p>
+
+<h2>Loadout keybinds</h2>
+<p><strong>Combat → Gear → Loadout Keybinds</strong> swaps equipment loadouts with keys you choose, with safeguards in the loadout menu.</p>
+
+<h2>Status bars</h2>
+<p>Separate, animated health, mana, defense, speed, vitality and respiration bars. They are off by default; turn them on under <strong>Combat → Player → Status Bars</strong>, then arrange them:</p>
+<div class="code"><pre>/sm bars</pre></div>
+<p>The editor anchors bars around the hotbar, snaps them to guides, and sets size, colour and per-bar options such as effective health on the defense bar.</p>
+<media-slot id="docs/everyday/bars-editor"></media-slot>
+
+<h2>Overlays</h2>
+<ul>
+  <li><strong>NPC Dialogue</strong> shows NPC lines in a dialogue box with the speaker's portrait; pick options with number keys.</li>
+  <li><strong>Information Overlays</strong> show client details and skill XP progress, with an optional progress bar.</li>
+  <li><strong>Ability Cooldowns</strong> show the held item's ability timer and a ready notification.</li>
+  <li><strong>Sign Enter</strong> lets you press Enter to finish Auction House, Bazaar and other signs.</li>
+</ul>
+<media-slot id="everyday/xp-widget"></media-slot>
+<media-slot id="everyday/sign-enter"></media-slot>
+
+<h2>Price history</h2>
+<p>Hover an item in a menu and press <kbd>P</kbd> for its Bazaar or auction price graph.</p>
+
+<h2>Auction browser</h2>
+<p>Search cached auction listings with filters, bids and item lore:</p>
+<div class="code"><pre>/sm ah</pre></div>
+
+<h2>Social and other helpers</h2>
+<ul>
+  <li><strong>Party Commands</strong>: choose party chat commands and cooldowns, with an optional stats API fallback.</li>
+  <li><strong>Player Utilities</strong>: cached friend activity, locations and profile information.</li>
+  <li><strong>Crystal Hollows Helpers</strong>: lobby information and configurable nucleus warp timing.</li>
+  <li><strong>Bal Notifications</strong>: share Bal spawn and health milestones with your party.</li>
+</ul>
+
+<h2>Theme and HUD</h2>
+<p>Pick a theme preset and a graphics mode under <strong>Settings → Appearance</strong>; see <a href="~/docs/graphics/">Graphics &amp; performance</a>. Move, scale, anchor and reset widgets with <code>/sm hud</code>.</p>

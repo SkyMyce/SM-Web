@@ -1,0 +1,61 @@
+<!--meta {"title": "Community & Discord", "description": "Connect Discord to SkyMyce for Global Chat, leaderboards, cosmetics sharing and signed updates, choose a Community data sharing mode, and disconnect.", "nav": "docs", "page": "docs", "layout": "docs", "updated": "2026-10-20", "lead": "Community features are optional. Without Discord, every local feature keeps working; with it you can use Global Chat, community leaderboards, cosmetics sharing and signed updates."} -->
+<h2>What needs a connection</h2>
+<table>
+  <thead><tr><th>Feature</th><th>Needs Discord</th></tr></thead>
+  <tbody>
+    <tr><td>Dungeon tools, tracker, journal, Bazaar, HUD, everyday helpers</td><td>No</td></tr>
+    <tr><td>Global Chat and private relay messages</td><td>Yes</td></tr>
+    <tr><td>Community leaderboards and journal comparison</td><td>Yes</td></tr>
+    <tr><td>Showing your cosmetics to other players</td><td>Yes (local cosmetics work without it)</td></tr>
+    <tr><td>Signed in-game updates</td><td>Yes</td></tr>
+  </tbody>
+</table>
+
+<h2>Connect Discord</h2>
+<ol>
+  <li>Run <code>/sm community</code> (or open <strong>Settings → Community</strong>) and choose to connect.</li>
+  <li>A browser page from the SkyMyce relay names the Minecraft account you are connecting. Continue only if you started the request in game.</li>
+  <li>Discord asks you to authorize SkyMyce with the <code>identify</code> scope: your Discord ID and name, nothing else.</li>
+  <li>When the page says "Discord connected", return to Minecraft.</li>
+</ol>
+<p>If the browser flow isn't available, the mod shows a one-time code you can give to the SkyMyce Discord bot instead.</p>
+<media-slot id="docs/community/connect"></media-slot>
+<p>Your game proves your Minecraft identity to the relay each time it connects; the relay never sees your Minecraft password or Microsoft login.</p>
+
+<h2>Community data sharing</h2>
+<p>One setting decides what you contribute, with three modes:</p>
+<table>
+  <thead><tr><th>Mode</th><th>What happens</th></tr></thead>
+  <tbody>
+    <tr><td><strong>On</strong></td><td>Shares dungeon stats, RNG drops, activity and leaderboard contributions, and shows your Minecraft name on public reports.</td></tr>
+    <tr><td><strong>On (anon)</strong> · default</td><td>Shares the same categories, but your name is replaced by "Anonymous player".</td></tr>
+    <tr><td><strong>Off</strong></td><td>Stops all sharing. Earlier contributions are removed or suppressed.</td></tr>
+  </tbody>
+</table>
+<p>Chat and cosmetics keep their own identities and are not affected by this setting. The full list of what each category contains is on the <a href="~/privacy/">privacy page</a>.</p>
+
+<h2>Global Chat</h2>
+<p>Open it with <code>/sm irc</code>, or send one message with <code>/sm irc &lt;message&gt;</code>. Global Chat is bridged with the SkyMyce Discord's global channel, so Discord members see your messages and you see theirs.</p>
+<ul>
+  <li>Reply to and react to messages; edit or delete your own from the message controls.</li>
+  <li>Images, GIFs and videos from links show as previews.</li>
+  <li>Messages are live only: there is no scroll-back history when you join.</li>
+  <li>Sending is rate limited; repeated identical messages are rejected for a short time.</li>
+</ul>
+<p>Party chat (<code>/sm party</code>) is unavailable, because the service cannot verify current Hypixel party membership.</p>
+
+<h2>Private messages</h2>
+<ul>
+  <li><code>/sm msg &lt;ign&gt; &lt;message&gt;</code> sends a private relay message.</li>
+  <li><code>/sm r &lt;message&gt;</code> replies to the last one.</li>
+  <li><code>/sm chat &lt;ign&gt;</code> routes normal chat to that friend until you run <code>/sm chat</code> or switch Hypixel chat channels. Check the selected mode before you send.</li>
+</ul>
+
+<h2>Signed updates</h2>
+<p>Automatic updates are <strong>Off</strong> by default. In <code>/sm community</code>, <strong>Update Now</strong> checks for a new release, verifies its Ed25519-signed manifest and the file's SHA-256, and stages it; restart Minecraft to apply. If community services are unavailable, your installed mod and local features continue to work.</p>
+
+<h2>Disconnect</h2>
+<p>Disconnect in <code>/sm community</code>. You can also manage the link from Discord with the SkyMyce bot's account commands (status, unlink a Minecraft account, disconnect). To remove what you shared, set Community data sharing to <strong>Off</strong> before or after disconnecting.</p>
+
+<h2>On the website</h2>
+<p>The <a href="~/community/">community hub</a> shows leaderboards, a read-only view of Global Chat and shared cosmetics. Website sign-in and live data need relay changes that are not deployed yet, so these pages currently show clearly labelled preview data.</p>

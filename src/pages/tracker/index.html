@@ -1,0 +1,105 @@
+<!--meta {"title": "Tracker", "description": "The SkyMyce Dungeon Tracker keeps your run history, loot, RNG journal, live splits and Catacombs and class progress on your own computer.", "nav": "tracker", "page": "tracker"} -->
+<section class="pin pin--violet" data-pin aria-labelledby="page-title">
+  <div class="pin__sticky">
+    <div class="pin__glow" aria-hidden="true"></div>
+    <div class="pin__content">
+      <p class="eyebrow">Tracker</p>
+      <h1 class="pin__statement" id="page-title">Every run, every drop, kept.</h1>
+      <p class="pin__sub">Run history, loot and personal RNG live in one place on your computer. Filter by floor, mode and date, and see how far you are from the next level.</p>
+    </div>
+    <p class="pin__hint" aria-hidden="true">Scroll</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <article class="feature-row" id="dungeon-tracker">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Dungeon Tracker</p>
+      <h2>Your history, without the digging.</h2>
+      <p>Review runs by floor and mode, with dates, timelines and estimated rewards. Profit is an estimate from current prices; incomplete data is marked rather than counted as zero.</p>
+      <p><code>/sm dungeon</code></p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="tracker/overview"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="loot">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Loot history</p>
+      <h2>Chests and rerolls, run by run.</h2>
+      <p>Each recorded chest keeps what was inside and its estimated value, including chests with shards and master stars.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="tracker/loot-history"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="rng-journal">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">RNG journal</p>
+      <h2>Your rare drops, searchable.</h2>
+      <p>Preserved personal acquisitions with dates, counts and measured history. Search an item, filter by period, and keep the record even if you never connect to the community.</p>
+      <p><code>/sm journal</code></p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="tracker/rng-journal"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="levels">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Levels</p>
+      <h2>How far to the next level, in runs.</h2>
+      <p>The Levels tab shows Catacombs and class progress toward a target you choose, as runs, XP or a percentage. The tracker widget can show the same target while you play.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="tracker/levels"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="widget">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Tracker widget</p>
+      <h2>The numbers that matter, on screen.</h2>
+      <p>Time, runs per hour, chests, rerolls, profit and Catacombs XP per hour. Rates only use runs with matched times, and the widget says when they don't.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="tracker/widget"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="splits">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Dungeon Splits</p>
+      <h2>Live splits, with your best beside them.</h2>
+      <p>Split times through each phase, personal bests, the best possible time and averages per floor, with server time and lag shown separately.</p>
+      <p><code>/sm splits</code></p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="tracker/splits"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="comparison">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Journal comparison</p>
+      <h2>Your drops next to the community's.</h2>
+      <p>With a community connection, compare your shared RNG drops with the mean across consenting SkyMyce players for the same period. Only players who share are counted, and the comparison says so.</p>
+      <p class="subtle">Optional. Needs Discord linking and Community data sharing turned on.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="tracker/journal-comparison"></media-slot></div></div>
+  </article>
+</div>
+
+<section class="section section--tight" aria-labelledby="cmd-title">
+  <div class="wrap">
+    <h2 class="h3 reveal" id="cmd-title">Commands</h2>
+    <div class="cmd-strip reveal" data-stagger>
+      <span class="cmd" data-copy="/sm dungeon">/sm dungeon <small>Dungeon Tracker</small></span>
+      <span class="cmd" data-copy="/sm journal">/sm journal <small>RNG journal</small></span>
+      <span class="cmd" data-copy="/sm splits">/sm splits <small>Dungeon splits</small></span>
+      <span class="cmd" data-copy="/sm hud">/sm hud <small>Move widgets</small></span>
+      <span class="cmd" data-copy="/sm leaderboard">/sm leaderboard <small>Community rankings</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="more-title">
+  <div class="wrap">
+    <h2 class="h3 reveal" id="more-title">Keep going</h2>
+    <div class="cross-links" data-stagger>
+      <a class="card card--link reveal" href="~/docs/tracker/"><h3>Tracker docs</h3><p>Filters, widget options and what is recorded.</p></a>
+      <a class="card card--link reveal" href="~/community/leaderboards/"><h3>Leaderboards</h3><p>Community rankings from consenting players.</p></a>
+      <a class="card card--link reveal" href="~/dungeons/"><h3>Dungeon tools</h3><p>What runs alongside the tracker.</p></a>
+    </div>
+  </div>
+</section>

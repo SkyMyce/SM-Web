@@ -1,0 +1,33 @@
+<!--meta {"title": "Tracker & RNG journal", "description": "The SkyMyce Dungeon Tracker, tracker widget, Levels tab, Dungeon Splits, RNG journal and journal comparison.", "nav": "docs", "page": "docs", "layout": "docs", "updated": "2026-10-20", "lead": "The tracker records your dungeon runs from the moment you turn it on. Everything it keeps stays on your computer unless you choose to share."} -->
+<h2>Dungeon Tracker</h2>
+<p>Turn on <strong>Dungeons → Runs → Dungeon Tracker</strong>, then open it with:</p>
+<div class="code"><pre>/sm dungeon</pre></div>
+<p>It shows run history, loot records and estimated rewards. Filter by floor, mode and dates, and step through the timeline of each run.</p>
+<media-slot id="docs/tracker/filters"></media-slot>
+<ul>
+  <li><strong>Profit</strong> is an estimate from current prices. If a price is missing, the total is marked incomplete rather than counting the item as zero.</li>
+  <li><strong>Rates</strong> per hour only use runs with matched start and end times, and say how many runs matched.</li>
+  <li><strong>Chests</strong> include rerolls, Hunting Box shards and master stars.</li>
+</ul>
+
+<h2>Tracker widget</h2>
+<p>Add the <strong>Dungeon Tracker</strong> widget in <code>/sm hud</code>. It shows time, runs per hour, chests and rerolls, profit, Catacombs XP per hour, and your progress to a target Catacombs level as XP left and an estimated number of runs.</p>
+
+<h2>Levels</h2>
+<p>The <strong>Levels</strong> tab shows Catacombs and class progress toward a target you choose, as runs, XP or a percentage.</p>
+
+<h2>Dungeon Splits</h2>
+<p>Live splits for each phase of a run, your personal bests, the best possible time and averages per floor. Open the splits view with:</p>
+<div class="code"><pre>/sm splits</pre></div>
+<p>Move the splits widget with <code>/sm hud</code>; its background opacity is adjustable.</p>
+
+<h2>RNG journal</h2>
+<p>Your preserved personal acquisitions with dates, counts and measured history. Search by item and filter by period:</p>
+<div class="code"><pre>/sm journal</pre></div>
+<p>The journal is personal and local. Saved history is never uploaded automatically.</p>
+
+<h2>Journal comparison</h2>
+<p>With a community connection and <strong>Community data sharing</strong> on, the journal can compare your shared RNG drops with the community for the same period: number of participants, total drops and the mean per identity. Only consenting SkyMyce players are counted, which the comparison states. If sharing is off, your own count is shown as unavailable.</p>
+
+<h2>Leaderboards</h2>
+<p>Community rankings by category and period are in game with <code>/sm leaderboard</code> and on the <a href="~/community/leaderboards/">leaderboards page</a>. They are built only from consenting players' shared, unverified client observations.</p>

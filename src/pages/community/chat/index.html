@@ -1,0 +1,30 @@
+<!--meta {"title": "Global Chat", "description": "Read SkyMyce Global Chat on the web, bridged with Minecraft and Discord. Read-only for now; send from the game with /sm irc.", "nav": "community", "page": "chat", "scripts": ["chat"]} -->
+<section class="page-intro" aria-labelledby="page-title">
+  <div class="wrap">
+    <p class="eyebrow"><a href="~/community/">Community</a></p>
+    <h1 class="display" id="page-title">Global Chat</h1>
+    <p class="section-lead">The same channel players use in game with <code>/sm irc</code>, bridged with the SkyMyce Discord. Messages are live only: you see what is said while you are here, with no history.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Chat">
+  <div class="wrap">
+    <div class="chat" data-chat>
+      <div class="chat__bar">
+        <h2>#global</h2>
+        <div class="btn-row"><span class="chat__state" data-chat-state data-state="connecting" role="status">Connecting</span><span class="badge" data-chat-badge>Loading</span></div>
+      </div>
+      <div class="chat__log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Messages" tabindex="0" data-chat-log></div>
+      <div class="chat__composer">
+        <div class="chat__replying" data-chat-replying hidden><span data-chat-replying-text></span><button class="btn btn--ghost btn--sm" type="button" data-chat-cancel-reply>Cancel</button></div>
+        <form data-chat-form>
+          <label class="sr-only" for="chat-input">Message</label>
+          <textarea id="chat-input" rows="1" maxlength="1024" placeholder="Read-only on the web" disabled data-chat-input></textarea>
+          <button class="btn btn--primary btn--sm" type="submit" disabled data-chat-send>Send</button>
+        </form>
+        <p class="chat__notice" data-chat-notice></p>
+      </div>
+    </div>
+    <p class="data-note">Messages from Minecraft show the player's linked IGN; messages from Discord show the Discord name. Links open in a new tab; only Discord-hosted images and videos are previewed. Report abuse to the team on Discord.</p>
+  </div>
+</section>

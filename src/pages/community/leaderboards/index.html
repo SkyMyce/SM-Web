@@ -1,0 +1,50 @@
+<!--meta {"title": "Leaderboards", "description": "SkyMyce community leaderboards for dungeon runs, estimated dungeon profit, average run time and reported RNG drops, by UTC week, month or all time.", "nav": "community", "page": "leaderboards", "scripts": ["leaderboards"]} -->
+<section class="page-intro" aria-labelledby="page-title">
+  <div class="wrap">
+    <p class="eyebrow"><a href="~/community/">Community</a></p>
+    <h1 class="display" id="page-title">Leaderboards</h1>
+    <p class="section-lead">Built only from consenting SkyMyce players' shared observations. Each Minecraft account is ranked separately, values are unverified client reports, and coin values are estimates.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="lb-title">
+  <div class="wrap">
+    <div class="data-head">
+      <div class="tabs" role="tablist" aria-label="Category" data-lb-tabs></div>
+      <span class="badge" data-lb-badge>Loading</span>
+    </div>
+    <form class="lb-controls" data-lb-form>
+      <label class="field"><span>Metric</span><select class="select" name="metric" data-lb-metric></select></label>
+      <label class="field"><span>Period</span><select class="select" name="period" data-lb-period></select></label>
+      <label class="field"><span>Search players</span><input class="input" type="search" name="search" maxlength="100" autocomplete="off" spellcheck="false" placeholder="Minecraft name" data-lb-search></label>
+    </form>
+    <div role="tabpanel" id="lb-panel" aria-labelledby="lb-title">
+      <div class="lb-meta">
+        <h2 id="lb-title" data-lb-label>Recorded dungeon completions</h2>
+        <p data-lb-description>New timestamped completed-run records; legacy aggregate totals are excluded.</p>
+      </div>
+      <div class="table-wrap" aria-live="polite" aria-busy="true" data-lb-wrap>
+        <table class="lb-table">
+          <caption class="sr-only" data-lb-caption>Leaderboard</caption>
+          <thead><tr>
+            <th scope="col" aria-sort="ascending" data-sort="rank"><button type="button">Rank</button></th>
+            <th scope="col" data-sort="player"><button type="button">Player</button></th>
+            <th scope="col" class="num" data-sort="value"><button type="button" data-lb-value-head>Value</button></th>
+            <th scope="col" class="num" data-sort="sampleSize"><button type="button">Records</button></th>
+            <th scope="col" class="num" data-sort="updatedAt"><button type="button">Last record</button></th>
+          </tr></thead>
+          <tbody data-lb-body><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr><tr><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td><td><span class="skeleton"></span></td></tr></tbody>
+        </table>
+      </div>
+      <div class="pager">
+        <p class="data-note" data-lb-summary>&nbsp;</p>
+        <div class="btn-row"><button class="btn btn--ghost btn--sm" type="button" data-lb-prev>Previous</button><span class="subtle" data-lb-page></span><button class="btn btn--ghost btn--sm" type="button" data-lb-next>Next</button></div>
+      </div>
+    </div>
+    <div class="callout" data-lb-coverage>
+      <p><strong>Coverage.</strong> <span data-lb-coverage-text>Consenting SkyMyce participants only; each Minecraft identity is ranked separately; this is not all Hypixel players</span></p>
+      <p><strong>Source.</strong> <span data-lb-source-text>Explicitly shared client observations; API-derived client snapshots remain unverified; coin valuations are estimates</span></p>
+      <p class="subtle">Weeks start Monday 00:00 UTC; months start on the 1st, UTC. Sorting the columns reorders the current page only. Rank changes are not shown because the service does not publish previous ranks.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,129 @@
+<!--meta {"title": "Download", "description": "Download SkyMyce for Minecraft 26.1.2 with Fabric. Requirements, per-OS install steps, signature and SHA-256 verification.", "nav": "download", "page": "download", "scripts": ["download"], "jsonld": "download"} -->
+<section class="page-intro" aria-labelledby="page-title">
+  <div class="wrap">
+    <p class="eyebrow">Download</p>
+    <h1 class="display" id="page-title">Get SkyMyce.</h1>
+    <p class="section-lead">Free, client-side, for Minecraft {{requirements.minecraft}} with Fabric. Check the requirements first: a missing dependency is the most common reason the game won't start.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="release-title">
+  <div class="wrap">
+    <div class="card release-card">
+      <div class="stack">
+        <div class="data-head"><h2 class="h3" id="release-title">Latest release</h2><span class="badge badge--pending" data-release-badge>Loading</span></div>
+        <dl class="release-facts" data-release-facts>
+          <dt>Version</dt><dd data-f="version"><span class="skeleton"></span></dd>
+          <dt>Minecraft</dt><dd>{{requirements.minecraft}}</dd>
+          <dt>Size</dt><dd data-f="size"><span class="skeleton"></span></dd>
+          <dt>SHA-256</dt><dd data-f="sha256"><span class="skeleton"></span></dd>
+          <dt>Signature</dt><dd data-f="signature"><span class="skeleton"></span></dd>
+          <dt>Released</dt><dd data-f="date"><span class="skeleton"></span></dd>
+        </dl>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--magnetic" href="{{github.releases}}" rel="noopener" data-release-download>Download from GitHub</a>
+          <a class="btn btn--ghost" href="~/changelog/">Changelog</a>
+        </div>
+        <p class="data-note" data-release-note>Release details come from the signed release service when it is reachable, otherwise from the GitHub release.</p>
+      </div>
+      <div>
+        <h3 class="h3">What's new</h3>
+        <ul class="prose" data-release-notes><li><span class="skeleton"></span></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="req-title" id="requirements">
+  <div class="wrap--narrow">
+    <p class="eyebrow">Before you install</p>
+    <h2 class="h2" id="req-title">Requirements</h2>
+    <p class="section-lead">The SkyMyce JAR already contains Fabric API and SkyblockPV. You install Fabric Loader and Fabric Language Kotlin yourself.</p>
+    <ul class="checklist">
+      <li><span class="checklist__icon" aria-hidden="true">MC</span><div><strong>Minecraft {{requirements.minecraft}}</strong><span>The exact version. Other versions will not load the mod.</span></div><span class="tag tag--must">Required</span></li>
+      <li><span class="checklist__icon" aria-hidden="true">J</span><div><strong>Java {{requirements.java}}</strong><span>Most launchers bundle it. In Prism or MultiMC, pick a Java {{requirements.java}} runtime for the instance.</span></div><span class="tag tag--must">Required</span></li>
+      <li><span class="checklist__icon" aria-hidden="true">FL</span><div><strong>Fabric Loader {{requirements.fabricLoader}} or newer</strong><span>Install with the Fabric installer or your launcher.</span></div><span class="tag tag--must">Required</span></li>
+      <li><span class="checklist__icon checklist__icon--warn" aria-hidden="true">K</span><div><strong>Fabric Language Kotlin</strong><span>Not bundled. Download the build for Minecraft {{requirements.minecraft}} and put it in the same mods folder. This is the dependency people miss most.</span></div><span class="tag tag--must">Install separately</span></li>
+      <li><span class="checklist__icon" aria-hidden="true">API</span><div><strong>Fabric API {{requirements.fabricApi}} or newer</strong><span>Bundled inside the SkyMyce JAR. If you also install it yourself, use this version or newer.</span></div><span class="tag">Bundled</span></li>
+      <li><span class="checklist__icon" aria-hidden="true">PV</span><div><strong>SkyblockPV {{requirements.skyblockPv}} or newer</strong><span>Bundled inside the SkyMyce JAR. If you already have SkyblockPV installed, it must be {{requirements.skyblockPv}} or newer.</span></div><span class="tag">Bundled</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="install-title" id="install">
+  <div class="wrap--narrow">
+    <h2 class="h2" id="install-title">Install</h2>
+    <div class="tabs" role="tablist" aria-label="Operating system" data-os-tabs>
+      <button role="tab" type="button" id="tab-win" aria-controls="os-win" aria-selected="true">Windows</button>
+      <button role="tab" type="button" id="tab-mac" aria-controls="os-mac" aria-selected="false" tabindex="-1">macOS</button>
+      <button role="tab" type="button" id="tab-linux" aria-controls="os-linux" aria-selected="false" tabindex="-1">Linux</button>
+    </div>
+    <div class="os-panel" role="tabpanel" id="os-win" aria-labelledby="tab-win" tabindex="0">
+      <ol class="steps">
+        <li><strong>Install Fabric</strong> for Minecraft {{requirements.minecraft}} with the Fabric installer or your launcher.</li>
+        <li><strong>Close Minecraft.</strong></li>
+        <li><strong>Open the mods folder.</strong> Press <kbd>Win</kbd>+<kbd>R</kbd>, paste the path below and press Enter. Launchers like Prism use the instance's own <code>mods</code> folder instead.<div class="code"><pre>%appdata%\.minecraft\mods</pre></div></li>
+        <li><strong>Add both JARs:</strong> the SkyMyce JAR and Fabric Language Kotlin.</li>
+        <li><strong>Launch</strong> with the Fabric profile and type <code>/sm</code>.</li>
+      </ol>
+    </div>
+    <div class="os-panel" role="tabpanel" id="os-mac" aria-labelledby="tab-mac" tabindex="0" hidden>
+      <ol class="steps">
+        <li><strong>Install Fabric</strong> for Minecraft {{requirements.minecraft}}.</li>
+        <li><strong>Close Minecraft.</strong></li>
+        <li><strong>Open the mods folder.</strong> In Finder choose Go, Go to Folder, and paste:<div class="code"><pre>~/Library/Application Support/minecraft/mods</pre></div></li>
+        <li><strong>Add both JARs:</strong> the SkyMyce JAR and Fabric Language Kotlin.</li>
+        <li><strong>Launch</strong> with the Fabric profile and type <code>/sm</code>.</li>
+      </ol>
+    </div>
+    <div class="os-panel" role="tabpanel" id="os-linux" aria-labelledby="tab-linux" tabindex="0" hidden>
+      <ol class="steps">
+        <li><strong>Install Fabric</strong> for Minecraft {{requirements.minecraft}}.</li>
+        <li><strong>Close Minecraft.</strong></li>
+        <li><strong>Open the mods folder:</strong><div class="code"><pre>~/.minecraft/mods</pre></div></li>
+        <li><strong>Add both JARs:</strong> the SkyMyce JAR and Fabric Language Kotlin.</li>
+        <li><strong>Launch</strong> with the Fabric profile and type <code>/sm</code>.</li>
+      </ol>
+    </div>
+    <div class="grid grid--2">
+      <media-slot id="download/mods-folder"></media-slot>
+      <media-slot id="download/first-launch"></media-slot>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="migrate-title" id="migrating">
+  <div class="wrap--narrow">
+    <div class="callout callout--warn">
+      <h2 class="h3" id="migrate-title">Migrating from the old Loader?</h2>
+      <p>SkyMyce no longer needs its own Loader. Remove the old SkyMyce Loader JAR and the old mod JAR from your mods folder, then install the current release as above. Keep your other mods and settings.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="verify-title" id="verify">
+  <div class="wrap--narrow prose">
+    <h2 id="verify-title">Verify your download</h2>
+    <p>Each release is described by a manifest signed with Ed25519 (key <code>{{signing.keyId}}</code>). When this page can reach the release service it checks that signature in your browser and shows the expected SHA-256 above. The in-game updater performs the same check before staging an update.</p>
+    <p>Run the command in the folder that holds the download, then compare the file's hash with the SHA-256 shown above or on the GitHub release:</p>
+    <h3>Windows (PowerShell)</h3>
+    <div class="code"><pre>Get-FileHash -Algorithm SHA256 .\Sky*.jar</pre></div>
+    <h3>macOS</h3>
+    <div class="code"><pre>shasum -a 256 [Ss]ky*.jar</pre></div>
+    <h3>Linux</h3>
+    <div class="code"><pre>sha256sum [Ss]ky*.jar</pre></div>
+    <p>If the hashes differ, delete the file and download it again from this page or GitHub. Do not run JARs shared in chats or by other players.</p>
+    <p class="subtle">The release file keeps its historical name, <code>Sky-Myce-&lt;version&gt;.jar</code>.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="next-title">
+  <div class="wrap">
+    <h2 class="h3" id="next-title">Next</h2>
+    <div class="cross-links">
+      <a class="card card--link" href="~/docs/getting-started/"><h3>Getting started</h3><p>Your first five minutes with <code>/sm</code>.</p></a>
+      <a class="card card--link" href="~/docs/install/"><h3>Troubleshooting</h3><p>Crashes, missing dependencies and logs.</p></a>
+      <a class="card card--link" href="~/privacy/"><h3>Privacy</h3><p>What stays local and what is shared.</p></a>
+    </div>
+  </div>
+</section>

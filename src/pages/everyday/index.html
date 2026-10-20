@@ -1,0 +1,145 @@
+<!--meta {"title": "Everyday QoL", "description": "Everyday SkyMyce helpers: Daily Digest, Auto Refill, stash value filter, loadout keybinds, status bars, NPC dialogue, sign Enter, price history, theme presets and graphics modes.", "nav": "everyday", "page": "everyday"} -->
+<section class="pin pin--green" data-pin aria-labelledby="page-title">
+  <div class="pin__sticky">
+    <div class="pin__glow" aria-hidden="true"></div>
+    <div class="pin__content">
+      <p class="eyebrow">Everyday QoL</p>
+      <h1 class="pin__statement" id="page-title">The small things, handled.</h1>
+      <p class="pin__sub">Dailies in one place, stacks that refill, bars you can arrange and menus that answer to Enter. Each one is a switch in <code>/sm</code>.</p>
+    </div>
+    <p class="pin__hint" aria-hidden="true">Scroll</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <article class="feature-row" id="digest">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Daily Digest</p>
+      <h2>Your day in SkyBlock, on one page.</h2>
+      <p>News, event updates, mayor information and your personal dailies, with optional community RNG reports. Personal history stays local.</p>
+      <p><code>/sm digest</code></p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="everyday/digest"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="auto-refill">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Auto Refill</p>
+      <h2>Stacks that top themselves up.</h2>
+      <p>Choose which consumables refill from your sack when they run out, so grinding and runs aren't interrupted by trips to the sack menu.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="everyday/auto-refill"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="stash">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Stash value filter</p>
+      <h2>Skip the junk in your stash.</h2>
+      <p>Low-value stash items are filtered using current prices, and unwanted pickups are prevented, so sorting a stash takes seconds.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="everyday/stash"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="loadouts">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Loadout keybinds</p>
+      <h2>Swap builds with a key.</h2>
+      <p>Bind equipment loadouts to keys, with safeguards in the loadout menu so a stray press doesn't change the wrong slot.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="everyday/loadouts"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="status-bars">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Status bars · off by default</p>
+      <h2><span data-count="6">6</span> bars, where you want them.</h2>
+      <p>Separate animated health, mana, defense, speed, vitality and respiration bars. Arrange them with <code>/sm bars</code>: anchors around the hotbar, snapping, sizes, colours and per-bar options.</p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="everyday/status-bars"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="overlays">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Overlays</p>
+      <h2>Readable by default.</h2>
+      <ul>
+        <li><strong>NPC dialogue box</strong> with the speaker and numbered options you pick with number keys</li>
+        <li><strong>Skill XP widget</strong> with a progress bar instead of action-bar spam</li>
+        <li><strong>Ability cooldown</strong> for your held item, with a ready notification</li>
+        <li><strong>Sign Enter</strong> to finish Auction House, Bazaar and bank signs</li>
+        <li><strong>Client info</strong> in a compact widget</li>
+      </ul>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="everyday/npc-dialogue"></media-slot></div></div>
+  </article>
+
+  <article class="feature-row" id="price-history">
+    <div class="feature-row__copy reveal">
+      <p class="eyebrow">Price history &amp; auctions</p>
+      <h2>Hover, press P, see the trend.</h2>
+      <p>Hover an item in any menu and press P for its Bazaar or auction price graph. The auction browser searches cached listings with filters, bids and item lore.</p>
+      <p><code>/sm ah</code></p>
+    </div>
+    <div class="feature-row__media reveal"><div class="parallax"><media-slot id="everyday/price-history"></media-slot></div></div>
+  </article>
+</div>
+
+<section class="section" aria-labelledby="appearance-title" id="appearance">
+  <div class="wrap">
+    <p class="eyebrow reveal">Appearance</p>
+    <h2 class="display reveal" id="appearance-title">Pick a theme. Pick a graphics mode.</h2>
+    <p class="section-lead reveal">Every menu and HUD widget follows one theme preset. Move and scale widgets with <code>/sm hud</code>.</p>
+    <ul class="swatches reveal" data-stagger aria-label="Theme presets">
+      <li class="swatch swatch--signature"><span aria-hidden="true"></span>Signature</li>
+      <li class="swatch swatch--glass"><span aria-hidden="true"></span>Dark glass</li>
+      <li class="swatch swatch--minimal"><span aria-hidden="true"></span>Minimal</li>
+      <li class="swatch swatch--borealis"><span aria-hidden="true"></span>Borealis</li>
+      <li class="swatch swatch--ember"><span aria-hidden="true"></span>Emberforge</li>
+      <li class="swatch swatch--verdant"><span aria-hidden="true"></span>Verdant</li>
+      <li class="swatch swatch--contrast"><span aria-hidden="true"></span>High contrast</li>
+      <li class="swatch swatch--light"><span aria-hidden="true"></span>Light</li>
+    </ul>
+    <div class="grid grid--4" data-stagger>
+      <div class="card reveal"><h3>Extremely Light</h3><p>The lightest menus, for the slowest machines.</p></div>
+      <div class="card reveal"><h3>Light</h3><p>Fewer effects, simple transitions.</p></div>
+      <div class="card reveal"><h3>Medium</h3><p>A balance of polish and speed.</p></div>
+      <div class="card reveal"><h3>High</h3><p>Full effects and GUI animations.</p></div>
+    </div>
+    <p class="subtle reveal">Graphics mode also controls GUI animations. It only changes SkyMyce's own menus: HUD information, tracking, routes and the Crush Camera are never reduced, and Minecraft's settings are not touched.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="also-title">
+  <div class="wrap">
+    <h2 class="h3 reveal" id="also-title">Also included</h2>
+    <div class="grid grid--3" data-stagger>
+      <div class="card reveal"><h3>Party commands</h3><p>Choose party chat commands and cooldowns, with an optional stats API fallback.</p></div>
+      <div class="card reveal"><h3>Crystal Hollows helpers</h3><p>Lobby information and configurable nucleus warp timing.</p></div>
+      <div class="card reveal"><h3>Bal notifications</h3><p>Share Bal spawn and health milestones with your party.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="cmd-title">
+  <div class="wrap">
+    <h2 class="h3 reveal" id="cmd-title">Commands</h2>
+    <div class="cmd-strip reveal" data-stagger>
+      <span class="cmd" data-copy="/sm digest">/sm digest <small>Daily Digest</small></span>
+      <span class="cmd" data-copy="/sm bars">/sm bars <small>Arrange status bars</small></span>
+      <span class="cmd" data-copy="/sm hud">/sm hud <small>Move widgets</small></span>
+      <span class="cmd" data-copy="/sm ah">/sm ah <small>Auction browser</small></span>
+      <span class="cmd" data-copy="/sm">/sm <small>All settings</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="more-title">
+  <div class="wrap">
+    <h2 class="h3 reveal" id="more-title">Keep going</h2>
+    <div class="cross-links" data-stagger>
+      <a class="card card--link reveal" href="~/docs/everyday/"><h3>Everyday docs</h3><p>Every helper and its settings.</p></a>
+      <a class="card card--link reveal" href="~/docs/graphics/"><h3>Graphics &amp; performance</h3><p>What each mode changes.</p></a>
+      <a class="card card--link reveal" href="~/download/"><h3>Download</h3><p>Get SkyMyce.</p></a>
+    </div>
+  </div>
+</section>

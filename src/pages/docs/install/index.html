@@ -1,0 +1,55 @@
+<!--meta {"title": "Install & troubleshooting", "description": "Install SkyMyce with Fabric on Windows, macOS and Linux, and fix the most common start-up problems.", "nav": "docs", "page": "docs", "layout": "docs", "updated": "2026-10-20", "lead": "Most install problems come down to one missing JAR or the wrong Java version. Work through the checklist and you'll be in game in a few minutes."} -->
+<h2>Requirements</h2>
+<table>
+  <thead><tr><th>Component</th><th>Version</th><th>How</th></tr></thead>
+  <tbody>
+    <tr><td>Minecraft</td><td>{{requirements.minecraft}}</td><td>Exactly this version</td></tr>
+    <tr><td>Java</td><td>{{requirements.java}}</td><td>Bundled by most launchers; pick it per instance in Prism or MultiMC</td></tr>
+    <tr><td>Fabric Loader</td><td>{{requirements.fabricLoader}} or newer</td><td>Fabric installer or your launcher</td></tr>
+    <tr><td><strong>Fabric Language Kotlin</strong></td><td>Build for {{requirements.minecraft}}</td><td><strong>Install separately</strong> into the same mods folder</td></tr>
+    <tr><td>Fabric API</td><td>{{requirements.fabricApi}} or newer</td><td>Bundled inside the SkyMyce JAR</td></tr>
+    <tr><td>SkyblockPV</td><td>{{requirements.skyblockPv}} or newer</td><td>Bundled inside the SkyMyce JAR</td></tr>
+  </tbody>
+</table>
+
+<h2>Install step by step</h2>
+<ol>
+  <li>Install Fabric for Minecraft {{requirements.minecraft}}.</li>
+  <li>Download SkyMyce from the <a href="~/download/">download page</a> and Fabric Language Kotlin for {{requirements.minecraft}}.</li>
+  <li>Close Minecraft.</li>
+  <li>Put both JARs into the mods folder of the instance you play with.</li>
+  <li>Start the game with the Fabric profile and type <code>/sm</code>.</li>
+</ol>
+<h3>Mods folder locations</h3>
+<p>Windows:</p>
+<div class="code"><pre>%appdata%\.minecraft\mods</pre></div>
+<p>macOS:</p>
+<div class="code"><pre>~/Library/Application Support/minecraft/mods</pre></div>
+<p>Linux:</p>
+<div class="code"><pre>~/.minecraft/mods</pre></div>
+<p>Launchers such as Prism, MultiMC and Modrinth App give each instance its own folder. Use the launcher's "Open mods folder" or "Open instance folder" action instead of the paths above.</p>
+<media-slot id="docs/install/mods-folder"></media-slot>
+
+<h2>Migrating from the old Loader</h2>
+<p>Earlier versions shipped with a separate SkyMyce Loader. It is no longer needed. Remove both the old Loader JAR and the old mod JAR, then install the current release normally. Keep your other mods and settings.</p>
+
+<h2>Troubleshooting</h2>
+<h3>Fabric reports that SkyMyce needs fabric-language-kotlin</h3>
+<p>Fabric Language Kotlin is missing. Download the build for Minecraft {{requirements.minecraft}} and put it next to SkyMyce. This is the most common error.</p>
+<media-slot id="docs/install/crash-missing-kotlin"></media-slot>
+<h3>Wrong Minecraft or Fabric version</h3>
+<p>Fabric names the version it expected. Make sure the instance runs Minecraft {{requirements.minecraft}} and Fabric Loader {{requirements.fabricLoader}} or newer.</p>
+<h3>A Java version error at launch</h3>
+<p>The game is running on an older Java. Select a Java {{requirements.java}} runtime for the instance in your launcher.</p>
+<h3>Conflict with SkyblockPV</h3>
+<p>SkyMyce bundles SkyblockPV. If you also installed SkyblockPV yourself, it must be {{requirements.skyblockPv}} or newer; otherwise remove your copy or update it.</p>
+<h3><code>/sm</code> does nothing</h3>
+<p>Check the JAR is in the mods folder of the instance you actually launched, and that the game started with Fabric. The title screen's Mods list should include SkyMyce.</p>
+<h3>A community feature says it is unavailable</h3>
+<p>Open <code>/sm community</code> and check the connection. Local features never depend on it, so everything else keeps working.</p>
+
+<h2>Reporting a problem</h2>
+<p>Include the SkyMyce version, Minecraft version and the relevant part of <code>logs/latest.log</code> from your instance folder. <strong>Remove account names, tokens or other private information first.</strong> Report it on <a href="{{github.issues}}" rel="noopener">GitHub Issues</a>.</p>
+
+<h2>Uninstall</h2>
+<p>Delete the SkyMyce JAR from your mods folder. Settings and local history stay in <code>config/skymyce</code> inside your instance folder; delete that folder too if you want them gone. To remove community data, disconnect and turn sharing off first; see <a href="~/privacy/">Privacy</a>.</p>
