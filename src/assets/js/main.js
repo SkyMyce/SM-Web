@@ -13,15 +13,20 @@ if (sda) root.classList.add("sda");
 // ---------- Header: condense on scroll, mobile menu ----------
 const header = document.querySelector("[data-header]");
 if (header) {
-  const sentinel = h("div", { "aria-hidden": "true", class: "sr-only" });
-  sentinel.style.position = "absolute"; sentinel.style.top = "8px";
-  document.body.prepend(sentinel);
-  new IntersectionObserver(([entry]) => header.classList.toggle("is-condensed", !entry.isIntersecting)).observe(sentinel);
   const toggle = header.querySelector("[data-nav-toggle]"), nav = header.querySelector("#site-nav");
   const setOpen = open => { toggle.setAttribute("aria-expanded", String(open)); nav.classList.toggle("is-open", open); document.body.style.overflow = open ? "hidden" : ""; };
   toggle?.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
   document.addEventListener("keydown", event => { if (event.key === "Escape" && toggle?.getAttribute("aria-expanded") === "true") { setOpen(false); toggle.focus(); } });
   matchMedia("(min-width: 921px)").addEventListener("change", event => { if (event.matches) setOpen(false); });
+}
+
+// ---------- Scroll progress chip in the pill ----------
+const progress = document.querySelector("[data-progress]");
+if (progress) {
+  let busy = false;
+  const update = () => { busy = false; const max = document.documentElement.scrollHeight - innerHeight; progress.textContent = `${max > 0 ? Math.round(scrollY / max * 100) : 0}%`; };
+  addEventListener("scroll", () => { if (!busy) { busy = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
 }
 
 // ---------- Copy buttons ----------

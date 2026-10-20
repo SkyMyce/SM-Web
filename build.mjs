@@ -78,13 +78,14 @@ const MARK = `<svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable
 function header(active) {
   return `<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-header>
-  <div class="site-header__inner">
+  <div class="site-header__pill">
     <a class="brand" href="~/" aria-label="SkyMyce home">${MARK}<span>SkyMyce</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="nav-toggle__bars" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
     <nav class="site-nav" id="site-nav" aria-label="Primary">
       <ul>${NAV.map(([id, label, href]) => `<li><a href="${href}"${id === active ? ' aria-current="page"' : ""}>${label}</a></li>`).join("")}</ul>
       <div class="site-nav__actions"><div class="session-slot" data-session-slot></div><a class="btn btn--primary btn--sm" href="~/download/"${active === "download" ? ' aria-current="page"' : ""}>Download</a></div>
     </nav>
+    <span class="nav-progress" data-progress aria-hidden="true">0%</span>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="nav-toggle__bars" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
   </div>
 </header>`;
 }
@@ -125,7 +126,7 @@ function head(meta, urlPath) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(meta.description)}">
 ${noindex}<link rel="canonical" href="${esc(canonical)}">
-<meta name="theme-color" content="#0b0f14">
+<meta name="theme-color" content="#050507">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website"><meta property="og:site_name" content="SkyMyce"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(meta.description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="SkyMyce: a client-side Fabric mod for Hypixel SkyBlock">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(meta.description)}"><meta name="twitter:image" content="${og}">
@@ -249,7 +250,7 @@ await writeFile(join(OUT, ".nojekyll"), "");
 if (config.customDomain) await writeFile(join(OUT, "CNAME"), config.customDomain + "\n");
 await writeFile(join(OUT, "manifest.webmanifest"), JSON.stringify({
   name: "SkyMyce", short_name: "SkyMyce", description: "A client-side Fabric mod for Hypixel SkyBlock.",
-  start_url: "./", scope: "./", display: "browser", background_color: "#0b0f14", theme_color: "#0b0f14",
+  start_url: "./", scope: "./", display: "browser", background_color: "#050507", theme_color: "#050507",
   icons: [{ src: "assets/img/icon-192.png", sizes: "192x192", type: "image/png" }, { src: "assets/img/icon-512.png", sizes: "512x512", type: "image/png" },
     { src: "assets/img/favicon.svg", sizes: "any", type: "image/svg+xml" }],
 }, null, 2));

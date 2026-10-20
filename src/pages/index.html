@@ -1,139 +1,166 @@
-<!--meta {"title": "SkyMyce", "description": "SkyMyce is a client-side Fabric mod for Hypixel SkyBlock: dungeon tools, run and RNG tracking, a guided Bazaar workflow and a HUD you arrange yourself. It says what's next and leaves every click to you.", "nav": "home", "page": "home", "scripts": ["hud-demo"]} -->
-<section class="hero" data-hero aria-labelledby="hero-title">
-  <div class="hero__sticky">
-    <div class="hud-scene" data-stage="tracker" aria-hidden="true">
-      <div class="hud-scene__world"><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="hud-crosshair"></div>
-
-      <div class="hud-panel hud-tracker" data-focus="tracker">
-        <p class="t">M7 Dungeon Tracker</p>
-        <p class="d">/skymyce dungeon</p>
-        <p>&nbsp;</p>
-        <p><span class="m">Time: </span><span class="y">1h</span><span class="m"> (</span><span class="y">6m</span><span class="m">/run)</span></p>
-        <p><span class="m">Runs: </span><span class="g">10</span><span class="m"> (</span><span class="g">10</span><span class="m">/h)</span></p>
-        <p><span class="m">Chests: </span><span class="g">10</span><span class="m"> (</span><span class="b">2 rerolls</span><span class="m">)</span></p>
-        <p><span class="m">Profit: ~12M (12M/h)</span></p>
-        <p><span class="m">Cata Exp: </span><span class="b">400k </span><span class="m">(</span><span class="b">400k</span><span class="m">/h)</span></p>
-        <p><span class="m">Target: </span><span class="b">Cata 53 </span><span class="m">(</span><span class="b">27.6M</span><span class="m"> XP left, ~</span><span class="y">69</span><span class="m"> runs)</span></p>
-      </div>
-
-      <div class="hud-panel hud-assist" data-focus="bazaar">
-        <p><span class="b">Bazaar Assistant </span><span class="g">Active</span></p>
-        <p><span class="w">Enchanted Carrot </span><span class="m">Place buy order</span></p>
-        <p class="y">Click Top Order +0.1</p>
-        <p class="m">Outbids the current best buy order by 0.1 coins</p>
-        <p><span class="m">This run </span><span class="g">+1.4M </span><span class="m">(2.1M/h)</span></p>
-      </div>
-
-      <div class="hud-panel hud-ability" data-focus="bars"><span class="r" data-hud-ability>Cooldown: 4s</span></div>
-      <div class="hud-panel hud-xp" data-focus="bars">
-        <div class="hud-xp__icon"></div>
-        <div><p><span class="b">+3,140 </span><span class="w">Combat XP</span><span class="m"> (</span><span class="w">86%</span><span class="m">)</span></p><div class="hud-xp__bar"><span data-hud-xp></span></div></div>
-      </div>
-
-      <div class="hud-bars" data-focus="bars">
-        <div class="hud-bar hud-bar--health"><span data-hud-health></span><b>❤ 3,820 / 4,250</b></div>
-        <div class="hud-bar hud-bar--mana"><span data-hud-mana></span><b>✎ 1,840 / 2,400</b></div>
-      </div>
-      <div class="hud-bars hud-bars--side hud-bars--right" data-focus="bars">
-        <div class="hud-bar hud-bar--defense"><span></span><b>❈ 1,262</b></div>
-        <div class="hud-bar hud-bar--speed"><span></span><b>✦ 400</b></div>
-      </div>
-      <div class="hud-hotbar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-
-      <div class="hud-gui hud-gui--bazaar" data-focus="bazaar">
-        <p class="hud-gui__title">Bazaar ➜ Enchanted Carrot</p>
-        <div class="hud-gui__grid">
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-          <i></i><i class="item"></i><i></i><i class="item target"></i><i></i><i class="item"></i><i></i><i class="item"></i><i></i>
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-        <div class="hud-gui__legend"><span>Highlighted only when exactly one slot matches</span></div>
-      </div>
-
-      <div class="hud-gui hud-gui--party" data-focus="party">
-        <p class="hud-gui__title">Party Finder</p>
-        <div class="hud-gui__grid">
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-          <i></i><i class="party match"></i><i class="party miss"></i><i class="party match"></i><i class="party"></i><i class="party miss"></i><i class="party match"></i><i class="party"></i><i></i>
-          <i></i><i class="party miss"></i><i class="party"></i><i class="party match"></i><i class="party miss"></i><i class="party"></i><i class="party miss"></i><i class="party"></i><i></i>
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-        <div class="hud-gui__legend"><span class="lg-match">Fits your class and PB</span><span class="lg-miss">Mismatch, still clickable</span></div>
-      </div>
-
-      <div class="hud-menu">
-        <div class="hud-menu__side"><b>SkyMyce</b><span class="on">Dungeons</span><span>Combat</span><span>Economy</span><span>Cosmetics</span><span>Utils</span><span>Settings</span></div>
-        <div class="hud-menu__main">
-          <div class="hud-menu__search">Search features and settings</div>
-          <div class="hud-menu__cards">
-            <div><em></em><strong>Party Finder</strong><small>Online friends, LFG availability and filters</small></div>
-            <div><em></em><strong>Dungeon Tracker</strong><small>Run history, loot and estimated rewards</small></div>
-            <div><em></em><strong>Goldor Coordination</strong><small>Terminal map, class steps, pre-leaps</small></div>
-            <div><em class="off"></em><strong>Crush Camera</strong><small>Fixed Storm viewpoints per class</small></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero__shade" aria-hidden="true"></div>
-
-    <div class="hero__copy">
-      <h1 class="hero__title" id="hero-title">Reads the run. Never plays it.</h1>
-      <p class="hero__lead">SkyMyce is a client-side Fabric mod for Hypixel SkyBlock: dungeon tools, run tracking and a guided Bazaar workflow in a HUD you arrange yourself. It says what's next and leaves every click to you.</p>
-      <div class="btn-row"><a class="btn btn--primary btn--magnetic" href="~/download/">Download</a><a class="btn" href="~/docs/getting-started/">Read the docs</a></div>
-      <ul class="readout" aria-label="Requirements"><li>Minecraft <b>{{requirements.minecraft}}</b></li><li>Java <b>{{requirements.java}}</b></li><li>Fabric</li><li>Client-side</li></ul>
-    </div>
-
-    <div class="hero__tour" data-hud-tour>
-      <div class="tour" role="tablist" aria-label="HUD tour">
-        <button role="tab" type="button" aria-selected="true" data-stage-btn="tracker">Dungeon Tracker</button>
-        <button role="tab" type="button" aria-selected="false" tabindex="-1" data-stage-btn="bars">Status bars and XP</button>
-        <button role="tab" type="button" aria-selected="false" tabindex="-1" data-stage-btn="bazaar">Bazaar Assistant</button>
-        <button role="tab" type="button" aria-selected="false" tabindex="-1" data-stage-btn="party">Party Finder</button>
-        <button role="tab" type="button" aria-selected="false" tabindex="-1" data-stage-btn="menu">The /sm menu</button>
-      </div>
-      <p class="tour__caption" aria-live="polite" data-hud-caption><strong>Dungeon Tracker.</strong> Runs, chests, profit estimates and Catacombs XP per hour, with how far you are from your target level.</p>
-      <p class="hero__hint" data-hud-hint>Scroll to tour the HUD</p>
-      <p class="illustration-note">Rebuilt in HTML from the mod's HUD theme and its editor preview values. Not live game data.</p>
-    </div>
+<!--meta {"title": "SkyMyce", "description": "SkyMyce is a client-side Fabric mod for Hypixel SkyBlock: dungeon tools, run and RNG tracking, a guided Bazaar workflow and a HUD you arrange yourself. It says what's next and leaves every click to you.", "nav": "home", "page": "home"} -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <p class="label">SkyMyce, a client-side Fabric mod for Hypixel SkyBlock</p>
+    <h1 class="hero__title" id="hero-title">Reads the run. Never plays it.</h1>
+    <p class="hero__lead">Dungeon tools, run tracking and a guided Bazaar in a HUD you arrange yourself. SkyMyce tells you what's next and leaves every click to you.</p>
+    <div class="btn-row"><a class="btn btn--primary" href="~/download/">Download</a><a class="btn" href="~/docs/getting-started/">Read the docs</a></div>
   </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track"><span>Party Finder</span><span>Dungeon Tracker</span><span>RNG journal</span><span>Bazaar Assistant</span><span>Goldor map</span><span>Status bars</span><span>Live splits</span><span>Chest protection</span><span>Crush Camera</span><span>Daily Digest</span><span>Auto Refill</span><span>Price history</span><span>Party Finder</span><span>Dungeon Tracker</span><span>RNG journal</span><span>Bazaar Assistant</span><span>Goldor map</span><span>Status bars</span><span>Live splits</span><span>Chest protection</span><span>Crush Camera</span><span>Daily Digest</span><span>Auto Refill</span><span>Price history</span></div>
+  </div>
+  <ul class="tiles" aria-label="What it looks like">
+    <li class="tile tile--wide">
+      <div class="hud-scene" aria-hidden="true">
+        <div class="hud-scene__world"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="hud-crosshair"></div>
+        <div class="hud-panel hud-tracker">
+          <p class="t">M7 Dungeon Tracker</p>
+          <p class="d">/skymyce dungeon</p>
+          <p>&nbsp;</p>
+          <p><span class="m">Time: </span><span class="y">1h</span><span class="m"> (</span><span class="y">6m</span><span class="m">/run)</span></p>
+          <p><span class="m">Runs: </span><span class="g">10</span><span class="m"> (</span><span class="g">10</span><span class="m">/h)</span></p>
+          <p><span class="m">Chests: </span><span class="g">10</span><span class="m"> (</span><span class="b">2 rerolls</span><span class="m">)</span></p>
+          <p><span class="m">Profit: ~12M (12M/h)</span></p>
+          <p><span class="m">Cata Exp: </span><span class="b">400k </span><span class="m">(</span><span class="b">400k</span><span class="m">/h)</span></p>
+        </div>
+        <div class="hud-panel hud-assist">
+          <p><span class="b">Bazaar Assistant </span><span class="g">Active</span></p>
+          <p><span class="w">Enchanted Carrot </span><span class="m">Place buy order</span></p>
+          <p class="y">Click Top Order +0.1</p>
+          <p><span class="m">This run </span><span class="g">+1.4M </span><span class="m">(2.1M/h)</span></p>
+        </div>
+        <div class="hud-panel hud-ability"><span class="g">Ability Ready!</span></div>
+        <div class="hud-panel hud-xp">
+          <div class="hud-xp__icon"></div>
+          <div><p><span class="b">+3,140 </span><span class="w">Combat XP</span><span class="m"> (</span><span class="w">86%</span><span class="m">)</span></p><div class="hud-xp__bar"><span></span></div></div>
+        </div>
+        <div class="hud-bars">
+          <div class="hud-bar hud-bar--health"><span></span><b>❤ 3,820 / 4,250</b></div>
+          <div class="hud-bar hud-bar--mana"><span></span><b>✎ 1,840 / 2,400</b></div>
+        </div>
+        <div class="hud-bars hud-bars--side hud-bars--right">
+          <div class="hud-bar hud-bar--defense"><span></span><b>❈ 1,262</b></div>
+          <div class="hud-bar hud-bar--speed"><span></span><b>✦ 400</b></div>
+        </div>
+        <div class="hud-hotbar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <span class="tile__note">HUD rebuilt in HTML from the mod's theme</span>
+    </li>
+    <li class="tile"><img src="~/assets/img/draft/goldor-map.svg" alt="Draft illustration of the Goldor terminal map with class steps and a pre-leap countdown" width="1600" height="1000" loading="lazy"></li>
+    <li class="tile"><img src="~/assets/img/draft/dungeon-tracker.svg" alt="Draft illustration of the Dungeon Tracker widget over a dungeon corridor" width="1600" height="1000" loading="lazy"></li>
+  </ul>
 </section>
 
 <section class="section" aria-labelledby="areas-title">
   <div class="wrap">
     <div class="section-head">
-      <h2 class="h2 reveal" id="areas-title">Four areas. Turn on only what you use.</h2>
-      <p class="lead reveal">Every feature is a switch in the <code>/sm</code> menu, and every one of them runs on your computer. None of them needs an account.</p>
+      <p class="label">What you can turn on</p>
+      <h2 class="h2" id="areas-title">Four areas. Only what you use.</h2>
+      <p class="lead">Every feature is a switch in the <code>/sm</code> menu, and every one of them runs on your computer. None of them needs an account.</p>
     </div>
-    <ul class="index" data-stagger>
-      <li class="reveal"><a href="~/dungeons/"><span class="index__area">Dungeons</span><span class="index__title">From the Party Finder to Goldor.</span><span class="index__desc">Party matching, missing-player alerts, chest reroll protection, routing, the Crush Camera and per-class Goldor steps.</span><code class="index__cmd">/sm pf</code></a></li>
-      <li class="reveal"><a href="~/tracker/"><span class="index__area">Tracker</span><span class="index__title">Every run, every drop, kept.</span><span class="index__desc">Run history, loot, an RNG journal, live splits and Catacombs and class progress toward the level you choose.</span><code class="index__cmd">/sm dungeon</code></a></li>
-      <li class="reveal"><a href="~/bazaar/"><span class="index__area">Bazaar</span><span class="index__title">Guided flips. Your clicks.</span><span class="index__desc">Ranked flip ideas, a private profit ledger and an assistant that points at the next button. It never trades for you.</span><code class="index__cmd">/sm bazaar</code></a></li>
-      <li class="reveal"><a href="~/everyday/"><span class="index__area">Everyday</span><span class="index__title">The small things, handled.</span><span class="index__desc">Daily Digest, Auto Refill, stash filtering, loadout keys, status bars, overlays and theme presets.</span><code class="index__cmd">/sm digest</code></a></li>
-    </ul>
+    <div class="panels" data-stagger>
+      <a class="panel reveal" href="~/dungeons/">
+        <p class="label">Dungeons</p>
+        <div class="panel__media"><img src="~/assets/img/draft/party-finder.svg" alt="Draft illustration of the Party Finder with matching and mismatched listings marked" width="1600" height="1000" loading="lazy"></div>
+        <div><h3>From the Party Finder to Goldor.</h3><p>Party matching, missing-player alerts, chest reroll protection, routing, the Crush Camera and per-class Goldor steps.</p></div>
+      </a>
+      <a class="panel reveal" href="~/tracker/">
+        <p class="label">Tracker</p>
+        <div class="panel__media"><img src="~/assets/img/draft/rng-journal.svg" alt="Draft illustration of the RNG journal listing rare drops beside an open chest" width="1600" height="1000" loading="lazy"></div>
+        <div><h3>Every run, every drop, kept.</h3><p>Run history, loot, an RNG journal, live splits and Catacombs and class progress toward the level you choose.</p></div>
+      </a>
+      <a class="panel reveal" href="~/bazaar/">
+        <p class="label">Bazaar</p>
+        <div class="panel__media"><img src="~/assets/img/draft/bazaar-assistant.svg" alt="Draft illustration of the Bazaar Assistant highlighting one button beside the Bazaar menu" width="1600" height="1000" loading="lazy"></div>
+        <div><h3>Guided flips. Your clicks.</h3><p>Ranked flip ideas, a private profit ledger and an assistant that points at the next button. It never trades for you.</p></div>
+      </a>
+      <a class="panel reveal" href="~/everyday/">
+        <p class="label">Everyday</p>
+        <div class="panel__media"><img src="~/assets/img/draft/status-bars.svg" alt="Draft illustration of health, mana, defense and speed bars arranged around the hotbar" width="1600" height="1000" loading="lazy"></div>
+        <div><h3>The small things, handled.</h3><p>Daily Digest, Auto Refill, stash filtering, loadout keys, status bars, overlays and theme presets.</p></div>
+      </a>
+    </div>
+    <p class="illustration-note">Illustrations are drafts standing in for screenshots.</p>
   </div>
 </section>
 
-<section class="section" aria-labelledby="trust-title">
+<section class="roll" data-pin aria-labelledby="roll-title">
+  <div class="wrap roll__sticky">
+    <p class="roll__left" id="roll-title">A mod that</p>
+    <ol class="roll__lines" aria-label="What SkyMyce does">
+      <li>reads the run.</li>
+      <li>keeps every drop.</li>
+      <li>guides the flip.</li>
+      <li>never clicks for you.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="steps-title">
   <div class="wrap">
     <div class="section-head">
-      <h2 class="h2 reveal" id="trust-title">Quiet by design.</h2>
-      <p class="lead reveal">SkyMyce reads menus and chat and tells you what matters. It does not click, trade or send anything for you.</p>
+      <p class="label">Getting started</p>
+      <h2 class="h2" id="steps-title">From download to <code>/sm</code> in four steps.</h2>
     </div>
-    <div class="pillars reveal" data-stagger>
-      <div class="pillar"><h3>Local first</h3><p>Dungeon tools, tracking, Bazaar records and the HUD run on your computer. No Discord account needed.</p></div>
-      <div class="pillar"><h3>Guides, never clicks</h3><p>The Bazaar Assistant highlights one button and says why. Placing, claiming and confirming stay yours.</p></div>
-      <div class="pillar"><h3>Optional community</h3><p>Global Chat, leaderboards and cosmetics sharing are opt-in through Discord. One setting controls what you share.</p></div>
-      <div class="pillar"><h3>Signed updates</h3><p>Releases are signed with Ed25519 and checked before install. Automatic updates are off by default.</p></div>
-    </div>
+    <ol class="steps-xl">
+      <li class="step-xl step-xl--1">
+        <div class="step-xl__head"><h3>Install Fabric for Minecraft {{requirements.minecraft}}.</h3><span class="step-xl__num" aria-hidden="true">01</span></div>
+        <ul class="step-xl__tags"><li>Fabric Loader {{requirements.fabricLoader}} or newer</li><li>Java {{requirements.java}}</li></ul>
+        <div class="step-xl__body">
+          <p>Use the Fabric installer or your launcher's Fabric profile. Most launchers bundle Java; in Prism or MultiMC pick a Java {{requirements.java}} runtime for the instance.</p>
+          <p><a href="~/docs/install/">Install and troubleshooting guide</a></p>
+        </div>
+      </li>
+      <li class="step-xl step-xl--2">
+        <div class="step-xl__head"><h3>Put two JARs in your mods folder.</h3><span class="step-xl__num" aria-hidden="true">02</span></div>
+        <ul class="step-xl__tags"><li>The SkyMyce JAR</li><li>Fabric Language Kotlin</li></ul>
+        <div class="step-xl__body">
+          <div>
+            <p>Fabric API and SkyblockPV are already inside the SkyMyce JAR. Fabric Language Kotlin is not, and a missing copy is the most common reason the game won't start.</p>
+            <div class="code"><pre>%appdata%\.minecraft\mods</pre></div>
+          </div>
+          <div class="step-xl__media"><img src="~/assets/img/draft/mods-folder.svg" alt="Draft illustration of a mods folder containing the SkyMyce and Fabric Language Kotlin JARs" width="1600" height="1000" loading="lazy"></div>
+        </div>
+      </li>
+      <li class="step-xl step-xl--3">
+        <div class="step-xl__head"><h3>Launch and type the command.</h3><span class="step-xl__num" aria-hidden="true">03</span></div>
+        <ul class="step-xl__tags"><li>Works on any server</li><li>No account needed</li></ul>
+        <div class="step-xl__body">
+          <div>
+            <p>Start Minecraft with the Fabric profile, join a server and open the menu. Search finds any setting by name.</p>
+            <div class="code"><pre>/sm</pre></div>
+          </div>
+        </div>
+      </li>
+      <li class="step-xl step-xl--4">
+        <div class="step-xl__head"><h3>Turn on only what you use.</h3><span class="step-xl__num" aria-hidden="true">04</span></div>
+        <ul class="step-xl__tags"><li>Every feature is a switch</li><li>Local by default</li></ul>
+        <div class="step-xl__body">
+          <div>
+            <p>Nothing is forced on. Flip the switches you want, move widgets with <code>/sm hud</code>, and connect Discord only if you want chat, leaderboards or shared cosmetics.</p>
+            <div class="btn-row"><a class="btn" href="~/download/">Download SkyMyce</a></div>
+          </div>
+          <div class="step-xl__media"><img src="~/assets/img/draft/sm-menu.svg" alt="Draft illustration of the /sm menu with feature switches" width="1600" height="1000" loading="lazy"></div>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
-<section class="section statement-band" aria-labelledby="cta-title">
+<section class="section" aria-labelledby="faq-title">
   <div class="wrap">
-    <h2 class="display reveal" id="cta-title">One JAR in your mods folder.</h2>
-    <p class="section-lead reveal">Install it next to Fabric Language Kotlin, launch with the Fabric profile and type <code>/sm</code>.</p>
-    <ul class="readout reveal" aria-label="Requirements"><li>Minecraft <b>{{requirements.minecraft}}</b></li><li>Java <b>{{requirements.java}}</b></li><li>Fabric Loader <b>{{requirements.fabricLoader}}</b></li><li>Fabric Language Kotlin</li></ul>
-    <div class="btn-row reveal"><a class="btn btn--primary btn--magnetic" href="~/download/">Download SkyMyce</a><a class="btn" href="~/docs/install/">Install guide</a></div>
+    <div class="section-head">
+      <p class="label">Questions</p>
+      <h2 class="h2" id="faq-title">Short answers. Real ones.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq"><summary>Does SkyMyce play or trade for me?</summary><div class="faq__body"><p>No. It reads menus, chat and what your client can see, and tells you what to do next. Clicks, trades, confirmations and movement are yours. The two optional Bazaar helpers, Auto Command and Auto Sign, are off by default and explained before you can turn them on.</p></div></details>
+      <details class="faq"><summary>Is it allowed on Hypixel?</summary><div class="faq__body"><p>SkyMyce is not affiliated with Hypixel or Mojang. You are responsible for following Hypixel's rules on client modifications. If you are unsure about a feature, leave it off.</p></div></details>
+      <details class="faq"><summary>Do I need Discord?</summary><div class="faq__body"><p>No. Every local feature works without it. Discord is only needed for Global Chat, community leaderboards, sharing cosmetics and signed updates.</p></div></details>
+      <details class="faq"><summary>What data does it share?</summary><div class="faq__body"><p>No community data is shared until you connect Discord. After that, one setting, Community data sharing, decides: On, On (anon) (the default) or Off. See <a href="~/privacy/">Privacy</a> for every category.</p></div></details>
+      <details class="faq"><summary>Which mods do I need with it?</summary><div class="faq__body"><p>Fabric Loader and Fabric Language Kotlin. Fabric API and SkyblockPV are bundled. See <a href="~/docs/install/">Install and troubleshooting</a>.</p></div></details>
+    </div>
+    <p class="subtle"><a href="~/docs/faq/">More questions and answers in the docs</a></p>
   </div>
 </section>

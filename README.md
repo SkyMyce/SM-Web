@@ -24,11 +24,12 @@ only when the live API is enabled.
 
 ## Design language
 
-The in-game HUD sets the look: the mod's Signature theme colours (`hud/ThemeData.kt`) for surfaces and the
-one cyan accent, the 5px game-UI radius, monospace "readouts" for commands, versions and labels, and the
-widget's 2px accent bar as the only ornament. Headlines are large, left-aligned system sans. The home hero is
-the HUD recreation, pinned and stepped through by scrolling; with reduced motion it is one static composition.
-All of it lives in `src/assets/css/site.css`, tokens first.
+Dark, airy and image-led, after the pacing of fourmula.ai: a near-black base, large rounded panels as sections,
+regular-weight giant headlines in the system sans stack, pill buttons and a floating pill menu with a scroll
+percentage. The home page opens with a tile grid (the HUD rebuilt in HTML plus draft illustrations), four area
+panels, a pinned statement list, four numbered install steps on saturated gradients, and an FAQ. Illustrations in
+`src/assets/img/draft/` are placeholders until real captures land in `src/assets/media/`. All styling lives in
+`src/assets/css/site.css`, tokens first.
 
 ## Quick start
 
