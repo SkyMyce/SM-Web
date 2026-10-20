@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><symbol id="mark" viewBox="0 0 64 64">
+<g stroke="#0a0d12" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="15.5" cy="17.5" r="11.5" fill="#8f98a3"/><circle cx="48.5" cy="17.5" r="11.5" fill="#8f98a3"/>
+<circle cx="15.5" cy="18" r="6.8" fill="#eadcb0" stroke="none"/><circle cx="48.5" cy="18" r="6.8" fill="#eadcb0" stroke="none"/>
+<path d="M32 12c-11.5 0-19 7.5-19 17 0 8.5 8 16.5 15.4 24.2 1.9 2 5.3 2 7.2 0C43 45.5 51 37.5 51 29c0-9.5-7.5-17-19-17Z" fill="#9aa3ae"/>
+<ellipse cx="32" cy="44.2" rx="7.2" ry="6.6" fill="#eadcb0" stroke="none"/>
+<circle cx="24.6" cy="27.4" r="3.9" fill="#f6f7f9" stroke-width="1.6"/><circle cx="39.4" cy="27.4" r="3.9" fill="#f6f7f9" stroke-width="1.6"/>
+<circle cx="24.9" cy="27.7" r="2.2" fill="#d8444a" stroke="none"/><circle cx="39.1" cy="27.7" r="2.2" fill="#d8444a" stroke="none"/><circle cx="24.9" cy="27.7" r="1.1" fill="#0a0d12" stroke="none"/><circle cx="39.1" cy="27.7" r="1.1" fill="#0a0d12" stroke="none"/>
+<ellipse cx="32" cy="50.4" rx="2.9" ry="2.2" fill="#0a0d12" stroke="none"/>
+<path d="M25.5 42 16.5 39.8M25.6 45 17 46M38.5 42 47.5 39.8M38.4 45 47 46" fill="none" stroke-width="1.4"/>
+</g>
+</symbol><use href="#mark"/></svg>

@@ -1,0 +1,16 @@
+{
+  "name": "skymyce-site",
+  "private": true,
+  "type": "module",
+  "description": "SkyMyce website. Static, zero runtime and zero build dependencies.",
+  "license": "GPL-3.0-only",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node build.mjs",
+    "build:root": "node build.mjs --base / --out _site-root",
+    "serve": "node build.mjs && node tools/serve.mjs --base /SM-Web/",
+    "serve:root": "node build.mjs --base / --out _site-root && node tools/serve.mjs --dir _site-root --base /",
+    "test": "node build.mjs && node tools/selftest.mjs && node tools/check-links.mjs",
+    "media": "node tools/media-audit.mjs"
+  }
+}

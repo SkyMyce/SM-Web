@@ -1,0 +1,85 @@
+<!--meta {"title": "Commands reference", "description": "Every SkyMyce /sm command: menus, dungeons, Goldor, tracker, Bazaar, chat and community.", "nav": "docs", "page": "docs", "layout": "docs", "updated": "2026-10-20", "lead": "Every command starts with <code>/sm</code>; <code>/skymyce</code> works as a longer alias. Arguments in angle brackets are required, in square brackets optional."} -->
+<h2>Menus</h2>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><code>/sm</code>, <code>/skymyce</code></td><td>Open the SkyMyce menu</td></tr>
+    <tr><td><code>/sm settings</code></td><td>Open the Settings area</td></tr>
+    <tr><td><code>/sm hud</code></td><td>Move, scale and reset HUD widgets</td></tr>
+    <tr><td><code>/sm bars</code></td><td>Arrange the status bars</td></tr>
+    <tr><td><code>/sm digest</code></td><td>Open Daily Digest</td></tr>
+    <tr><td><code>/sm ah</code></td><td>Open the auction browser</td></tr>
+  </tbody>
+</table>
+<media-slot id="docs/commands/search"></media-slot>
+
+<h2>Dungeons</h2>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><code>/sm pf</code></td><td>Dungeon friends and LFG (Party Finder tools)</td></tr>
+    <tr><td><code>/sm friends</code></td><td>Friends and social screen</td></tr>
+    <tr><td><code>/sm route</code>, <code>/sm route status</code></td><td>Show the routing state</td></tr>
+    <tr><td><code>/sm route reload</code></td><td>Reload the routing room data</td></tr>
+    <tr><td><code>/sm crush-camera</code></td><td>Configure and preview Crush Camera viewpoints</td></tr>
+    <tr><td><code>/sm m7pb [player]</code>, <code>/m7pb [player]</code></td><td>Look up a selected-profile M7 personal best</td></tr>
+  </tbody>
+</table>
+
+<h2>Goldor</h2>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><code>/sm goldor</code></td><td>Current Goldor status</td></tr>
+    <tr><td><code>/sm goldor guide [class] [section]</code></td><td>Step guide, for example <code>/sm goldor guide mage s2</code></td></tr>
+    <tr><td><code>/sm goldor if</code></td><td>List every condition with its current value and how it is known</td></tr>
+    <tr><td><code>/sm goldor if &lt;condition&gt; &lt;yes|no|clear&gt;</code></td><td>Confirm or clear a condition for this run</td></tr>
+    <tr><td><code>/sm goldor role &lt;player&gt; &lt;class&gt;</code></td><td>Set a teammate's class manually</td></tr>
+    <tr><td><code>/sm goldor unrole &lt;player&gt;</code></td><td>Clear a manual class</td></tr>
+    <tr><td><code>/sm goldor section &lt;s1|s2|s3|s4|core&gt;</code></td><td>Correct the current section</td></tr>
+    <tr><td><code>/sm goldor learned [reset]</code></td><td>Show or clear learned teammate roles</td></tr>
+  </tbody>
+</table>
+
+<h2>Tracker</h2>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><code>/sm dungeon</code></td><td>Open the Dungeon Tracker</td></tr>
+    <tr><td><code>/sm splits</code></td><td>Open Dungeon Splits</td></tr>
+    <tr><td><code>/sm journal</code></td><td>View your personal RNG history</td></tr>
+    <tr><td><code>/sm leaderboard</code></td><td>Community rankings and their coverage</td></tr>
+  </tbody>
+</table>
+
+<h2>Bazaar</h2>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><code>/sm bazaar</code></td><td>Open the Bazaar terminal</td></tr>
+    <tr><td><code>/sm bazaar on</code> / <code>off</code> / <code>toggle</code></td><td>Start, stop or toggle a flipping session</td></tr>
+    <tr><td><code>/sm bazaar assist [start|stop]</code></td><td>Start or stop the Bazaar Assistant</td></tr>
+    <tr><td><code>/sm bazaar cycle</code></td><td>Show the next position on the Active Flip HUD</td></tr>
+    <tr><td><code>/sm bazaar dashboard</code></td><td>Open the private dashboard on this computer</td></tr>
+    <tr><td><code>/sm bazaar close-dashboard</code></td><td>Shut the dashboard down now</td></tr>
+  </tbody>
+</table>
+
+<h2>Chat and community</h2>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><code>/sm community</code></td><td>Manage the Discord connection, data sharing and updates</td></tr>
+    <tr><td><code>/sm irc</code>, <code>/sm global</code></td><td>Open Global Chat</td></tr>
+    <tr><td><code>/sm irc &lt;message&gt;</code></td><td>Send one Global Chat message</td></tr>
+    <tr><td><code>/sm msg &lt;ign&gt; &lt;message&gt;</code></td><td>Send a private relay message</td></tr>
+    <tr><td><code>/sm reply &lt;message&gt;</code>, <code>/sm r &lt;message&gt;</code></td><td>Reply to the last private message</td></tr>
+    <tr><td><code>/sm chat &lt;ign&gt;</code></td><td>Route normal chat to a friend</td></tr>
+    <tr><td><code>/sm chat</code></td><td>Stop routing and return to normal chat</td></tr>
+    <tr><td><code>/sm help</code></td><td>Chat help</td></tr>
+    <tr><td><code>/sm cosmetics</code></td><td>Open Cosmetics Studio</td></tr>
+    <tr><td><code>/sm cosmetics link</code></td><td>Open Cosmetics Studio on the linking step</td></tr>
+  </tbody>
+</table>
+<div class="callout"><p><strong>Party chat is unavailable.</strong> <code>/sm party</code> and <code>/sm pc</code> exist but are rejected, because the community service cannot verify current Hypixel party membership. Party Finder tools are separate and work normally.</p></div>
+<p class="subtle">A few commands (<code>ircaction</code>, <code>lfgreply</code>, <code>relaymsg</code>, <code>ircstatus</code>, <code>irccancel</code>) are used by clickable chat buttons and are not meant to be typed.</p>

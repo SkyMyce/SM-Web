@@ -1,0 +1,10 @@
+/* Loaded only inside <noscript>. Layout rules that JS would otherwise toggle live here, so the JS path
+   never changes layout after first paint (no layout shift). */
+.nav-toggle, .docs-nav-toggle, .docs-search, .hud-controls, .session-slot { display: none !important; }
+.site-nav, .docs-nav { display: flex !important; }
+.docs-nav { display: block !important; }
+@media (max-width: 920px) { .site-nav { position: static; max-height: none; background: none; border: 0; padding: 0; } .site-header { height: auto; } .site-header__inner { flex-wrap: wrap; padding-block: .6rem; } }
+.pin { height: auto; }
+.pin__sticky { position: relative; height: auto; padding-block: var(--s-10); }
+.pin__statement span, .pin__sub { opacity: 1 !important; transform: none !important; }
+.pin__hint { display: none; }

@@ -1,0 +1,24 @@
+{
+  "sections": [
+    { "title": "Start here", "pages": [
+      { "title": "Getting started", "url": "/docs/getting-started/" },
+      { "title": "Install & troubleshooting", "url": "/docs/install/" },
+      { "title": "Commands reference", "url": "/docs/commands/" }
+    ] },
+    { "title": "Features", "pages": [
+      { "title": "Dungeons", "url": "/docs/dungeons/" },
+      { "title": "Goldor coordination", "url": "/docs/goldor/" },
+      { "title": "Tracker & RNG journal", "url": "/docs/tracker/" },
+      { "title": "Bazaar & Assistant", "url": "/docs/bazaar/" },
+      { "title": "Everyday QoL", "url": "/docs/everyday/" }
+    ] },
+    { "title": "Community", "pages": [
+      { "title": "Community & Discord", "url": "/docs/community/" },
+      { "title": "Cosmetics Studio", "url": "/docs/cosmetics/" }
+    ] },
+    { "title": "Reference", "pages": [
+      { "title": "Graphics & performance", "url": "/docs/graphics/" },
+      { "title": "FAQ", "url": "/docs/faq/" }
+    ] }
+  ]
+}

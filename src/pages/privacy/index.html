@@ -1,0 +1,159 @@
+<!--meta {"title": "Privacy", "description": "What SkyMyce keeps on your computer, what its optional community features send, the Community data sharing setting, and how to disconnect and remove your data.", "nav": "", "page": "privacy", "updated": "2026-10-20"} -->
+<section class="page-intro" aria-labelledby="page-title">
+  <div class="wrap--narrow">
+    <p class="eyebrow">Privacy</p>
+    <h1 class="display" id="page-title">Local by default.</h1>
+    <p class="section-lead">SkyMyce runs on your computer. Nothing on this page applies until you connect Discord, and the one sharing setting starts anonymous.</p>
+    <p class="subtle">Last updated 20 October 2026. This describes the SkyMyce mod and community service as built, and the single sharing setting in the upcoming mod update.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="local-title">
+  <div class="wrap--narrow prose">
+    <h2 id="local-title">Stays on your computer</h2>
+    <p>These never leave your device, whether or not you connect Discord:</p>
+    <ul>
+      <li>Your settings, HUD layout and theme.</li>
+      <li>Dungeon Tracker history, loot, splits and the RNG journal.</li>
+      <li>Bazaar records, positions, profit history and session replays. Publishing a replay is a separate, explicit choice with redaction options.</li>
+      <li>Daily Digest history.</li>
+    </ul>
+    <p>They live in <code>config/skymyce</code> in your instance folder. Some features read public game data, such as Bazaar and auction prices and SkyBlock news, without sending anything about you.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="modes-title">
+  <div class="wrap--narrow">
+    <h2 class="h2" id="modes-title">Community data sharing</h2>
+    <p class="section-lead">After you connect Discord, one setting in <code>/sm community</code> decides what you contribute to the community.</p>
+    <div class="state-grid">
+      <div class="state-card"><h3>On</h3><p>Shares dungeon stats, RNG drops, activity and leaderboard contributions, and shows your Minecraft name on public reports.</p></div>
+      <div class="state-card state-card--default"><h3>On (anon) <span class="badge badge--plain">Default</span></h3><p>Shares the same categories, but your name appears as "Anonymous player". Anonymous entries can't be found by searching your name.</p></div>
+      <div class="state-card"><h3>Off</h3><p>Stops all sharing. Your earlier contributions are removed, and RNG reports already posted are suppressed and deleted from the feed.</p></div>
+    </div>
+    <p class="subtle">Turning sharing back on starts from that moment. Nothing from the time it was off is sent later. Chat and cosmetics are separate features with their own identities and are not affected by this setting.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="cats-title">
+  <div class="wrap--narrow">
+    <h2 class="h2" id="cats-title">What each category contains</h2>
+    <div class="data-cat">
+      <h3>Dungeon stats</h3>
+      <dl>
+        <div><dt>What</dt><dd>Catacombs and class levels, completed floors, completion and S+ times and your selected class, used by Party Finder tools so friends can see what you can run. New completed-run records, estimated chest profit and run times for leaderboards.</dd></div>
+        <div><dt>Who sees it</dt><dd>Friends' clients see the cached stats; leaderboards show totals per Minecraft account, by name only when sharing is On.</dd></div>
+        <div><dt>Kept</dt><dd>Friend-cache stats for about ten minutes. Leaderboard records until you turn sharing off or storage limits retire them.</dd></div>
+      </dl>
+    </div>
+    <div class="data-cat">
+      <h3>RNG drops</h3>
+      <dl>
+        <div><dt>What</dt><dd>Newly detected supported drops: item, activity (dungeon, slayer, Kuudra or fishing), time and, when seen, rarity, display name and floor. Never your inventory.</dd></div>
+        <div><dt>Who sees it</dt><dd>The community RNG feed in game and the SkyMyce Discord's RNG channel, and the RNG leaderboard. Your name only when sharing is On.</dd></div>
+        <div><dt>Kept</dt><dd>Feed posts for about a week in game; counted for leaderboards until you turn sharing off.</dd></div>
+      </dl>
+    </div>
+    <div class="data-cat">
+      <h3>Activity</h3>
+      <dl>
+        <div><dt>What</dt><dd>Reserved for supported progress contributions. No activity publisher exists today, so nothing is collected in this category.</dd></div>
+        <div><dt>Who sees it</dt><dd>Nobody yet.</dd></div>
+      </dl>
+    </div>
+    <div class="data-cat">
+      <h3>Leaderboards</h3>
+      <dl>
+        <div><dt>What</dt><dd>Rankings built from the dungeon and RNG records above. Values are unverified client observations; coin values are estimates.</dd></div>
+        <div><dt>Who sees it</dt><dd>Players in game, the Discord bot and this website. Each Minecraft account is ranked separately.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="link-title">
+  <div class="wrap--narrow">
+    <h2 class="h2" id="link-title">When you connect Discord</h2>
+    <div class="data-cat">
+      <h3>Identity</h3>
+      <dl>
+        <div><dt>What</dt><dd>Your Discord ID, username and display name (the <code>identify</code> scope only), the Minecraft account (UUID and name) you connected, and your SkyMyce version. Your game proves the Minecraft account to the relay; your password and Microsoft login are never sent.</dd></div>
+        <div><dt>Why</dt><dd>To link community features to one person and to enforce bans on abuse.</dd></div>
+      </dl>
+    </div>
+    <div class="data-cat">
+      <h3>Session</h3>
+      <dl>
+        <div><dt>What</dt><dd>Short-lived access tokens (15 minutes) and a refresh token (up to 90 days), stored by the relay as hashes, plus connection times and an audit log of account actions.</dd></div>
+      </dl>
+    </div>
+    <div class="data-cat">
+      <h3>Device observation</h3>
+      <dl>
+        <div><dt>What</dt><dd>When you connect or refresh a session, the mod sends a one-way SHA-256 hash of an existing operating-system identifier (for example the SMBIOS UUID on Windows), with its source and your platform (Windows, macOS, Linux or other). The identifier itself is hashed on your computer and never sent.</dd></div>
+        <div><dt>Why</dt><dd>Private administrator metadata for investigating abuse. It is never used to grant or block access, and a missing or changed value does not limit your connection.</dd></div>
+      </dl>
+    </div>
+    <div class="data-cat">
+      <h3>Rate limiting</h3>
+      <dl>
+        <div><dt>What</dt><dd>Your IP address is used transiently by the relay's rate limits on Cloudflare; repeated abuse can trigger a temporary cooldown on your account.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="features-title">
+  <div class="wrap--narrow">
+    <h2 class="h2" id="features-title">Features that send data when you use them</h2>
+    <div class="data-cat">
+      <h3>Global Chat</h3>
+      <dl>
+        <div><dt>What</dt><dd>Your messages, replies and reactions, with your linked Minecraft name. Links to images or video are previewed by recipients.</dd></div>
+        <div><dt>Who sees it</dt><dd>Connected SkyMyce players and the SkyMyce Discord's global channel. Discord keeps bridged messages under Discord's own policies.</dd></div>
+        <div><dt>Kept</dt><dd>Chat is live only. The relay holds a message for up to two minutes for delivery, and a short preview (up to 256 characters) for 15 minutes so replies, edits and reactions work.</dd></div>
+      </dl>
+    </div>
+    <div class="data-cat">
+      <h3>Private messages</h3>
+      <dl><div><dt>What</dt><dd>Messages you send with <code>/sm msg</code>, delivered live to the recipient.</dd></div></dl>
+    </div>
+    <div class="data-cat">
+      <h3>Shared cosmetics</h3>
+      <dl>
+        <div><dt>What</dt><dd>Only when you share: your display name and its styling, player and nametag sizes, and a cape preset or uploaded 64 × 32 PNG.</dd></div>
+        <div><dt>Who sees it</dt><dd>SkyMyce players' clients and the website gallery. Uploaded capes are stored privately and checked before use.</dd></div>
+        <div><dt>Remove</dt><dd>Reset your look or delete capes in <code>/sm cosmetics</code>.</dd></div>
+      </dl>
+    </div>
+    <div class="data-cat">
+      <h3>Updates and alerts</h3>
+      <dl><div><dt>What</dt><dd>Checking for a signed update downloads the release manifest and file. Bazaar Discord DM alerts, if you turn them on, are delivered through the relay.</dd></div></dl>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="control-title">
+  <div class="wrap--narrow prose">
+    <h2 id="control-title">Opt out, disconnect, delete</h2>
+    <ul>
+      <li><strong>Stop sharing:</strong> set Community data sharing to Off in <code>/sm community</code>. Prior contributions are removed or suppressed.</li>
+      <li><strong>Stay anonymous:</strong> keep the default, On (anon). Switching from On to On (anon) removes your earlier contributions, so named reports don't linger.</li>
+      <li><strong>Leave chat or cosmetics:</strong> stop using Global Chat; reset your look or delete capes in the studio.</li>
+      <li><strong>Disconnect:</strong> use Disconnect in <code>/sm community</code>, or the SkyMyce Discord bot's account commands to disconnect or unlink a Minecraft account.</li>
+      <li><strong>Delete your account record:</strong> after turning sharing off and disconnecting, ask the team to remove the remaining account and audit records. Contact the team through the SkyMyce Discord.</li>
+      <li><strong>Remove local data:</strong> delete <code>config/skymyce</code> from your instance folder.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="web-title">
+  <div class="wrap--narrow prose">
+    <h2 id="web-title">This website</h2>
+    <ul>
+      <li>No cookies, analytics, ads or third-party scripts or fonts. It is a static site hosted on GitHub Pages, which keeps its own server logs.</li>
+      <li>Website sign-in, when enabled, keeps its token in this tab's session storage only and sends it only to the SkyMyce relay.</li>
+      <li>The preview session and demo data on community pages never leave your browser.</li>
+    </ul>
+  </div>
+</section>

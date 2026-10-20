@@ -1,0 +1,4 @@
+{
+  "note": "Hand-maintained incident notes for /status. Add newest first: { \"date\": \"YYYY-MM-DD\", \"title\": \"...\", \"status\": \"resolved|monitoring|investigating\", \"body\": \"...\" }",
+  "incidents": []
+}
