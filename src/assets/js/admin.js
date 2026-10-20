@@ -245,9 +245,9 @@ async function boot(session) {
   if (!session) {
     db = null; shell.hidden = true; gate.hidden = false; banner.hidden = true; closeDrawer();
     const actions = $("[data-adm-gate-actions]");
-    actions.replaceChildren(
+    actions.replaceChildren(...[
       config.features.webLogin ? h("button", { class: "btn btn--primary", type: "button", onclick: () => startLogin("admin") }, "Sign in with Discord") : null,
-      h("button", { class: `btn ${config.features.webLogin ? "btn--ghost" : "btn--primary"}`, type: "button", onclick: () => startPreviewSession(true) }, "Open preview console"));
+      h("button", { class: `btn ${config.features.webLogin ? "btn--ghost" : "btn--primary"}`, type: "button", onclick: () => startPreviewSession(true) }, "Open preview console")].filter(Boolean));
     $("[data-adm-gate-note]").textContent = config.features.webLogin ? "Admin sessions are short-lived and are not refreshed beyond one hour."
       : "Sign-in is not enabled: the relay's admin endpoints don't exist yet. The preview console uses local mock data.";
     return;

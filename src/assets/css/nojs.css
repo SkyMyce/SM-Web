@@ -1,10 +1,14 @@
 /* Loaded only inside <noscript>. Layout rules that JS would otherwise toggle live here, so the JS path
    never changes layout after first paint (no layout shift). */
-.nav-toggle, .docs-nav-toggle, .docs-search, .hud-controls, .session-slot { display: none !important; }
+.nav-toggle, .docs-nav-toggle, .docs-search, .hero__tour, .session-slot { display: none !important; }
 .site-nav, .docs-nav { display: flex !important; }
 .docs-nav { display: block !important; }
 @media (max-width: 920px) { .site-nav { position: static; max-height: none; background: none; border: 0; padding: 0; } .site-header { height: auto; } .site-header__inner { flex-wrap: wrap; padding-block: .6rem; } }
+.hero { height: auto; }
+.hero__sticky { position: relative; height: auto; min-height: 100vh; }
+.hud-scene [data-focus] { opacity: 1 !important; filter: none !important; }
+.hud-gui, .hud-menu { display: none; }
 .pin { height: auto; }
-.pin__sticky { position: relative; height: auto; padding-block: var(--s-10); }
-.pin__statement span, .pin__sub { opacity: 1 !important; transform: none !important; }
+.pin__sticky { position: relative; height: auto; padding-block: var(--s-10) var(--s-8); }
+.pin__statement, .pin__sub, .pin__index { opacity: 1 !important; transform: none !important; }
 .pin__hint { display: none; }

@@ -22,6 +22,14 @@ The output is a static folder deployed by the official GitHub Pages actions. The
 dependencies, no third-party scripts and no web fonts. The only network calls go to the SkyMyce relay, and
 only when the live API is enabled.
 
+## Design language
+
+The in-game HUD sets the look: the mod's Signature theme colours (`hud/ThemeData.kt`) for surfaces and the
+one cyan accent, the 5px game-UI radius, monospace "readouts" for commands, versions and labels, and the
+widget's 2px accent bar as the only ornament. Headlines are large, left-aligned system sans. The home hero is
+the HUD recreation, pinned and stepped through by scrolling; with reduced motion it is one static composition.
+All of it lives in `src/assets/css/site.css`, tokens first.
+
 ## Quick start
 
 Requires Node 20 or newer. There is nothing to install.
@@ -31,6 +39,7 @@ node build.mjs                                     # build into _site/ for the c
 node tools/serve.mjs --base /SM-Web/               # http://localhost:8080/SM-Web/
 node tools/selftest.mjs && node tools/check-links.mjs
 node tools/media-audit.mjs                         # which screenshots and clips are still missing
+node tools/screenshot.mjs --out _shots http://localhost:8080/SM-Web/ "http://localhost:8080/SM-Web/@1800"   # page screenshots via Chrome (add --width 390, --reduced-motion)
 ```
 
 The same commands are available as `npm run build`, `npm run serve`, `npm test` and `npm run media`.
@@ -96,7 +105,7 @@ src/assets/css/           site.css (design tokens and components), admin.css, no
 src/assets/js/            main (motion, nav, lightbox), core, auth, per-page modules, preview-data
 src/assets/img/           mark.svg (logo), favicons, og.png, cape textures
 src/assets/media/         screenshots and clips (see docs/CAPTURE-GUIDE.md)
-tools/                    serve, selftest, check-links, media-audit, render-brand (optional)
+tools/                    serve, selftest, check-links, media-audit, screenshot, render-brand (optional)
 docs/                     api-contract.md, CAPTURE-GUIDE.md, mod-repo-cleanup.md
 .github/workflows/pages.yml
 ```
