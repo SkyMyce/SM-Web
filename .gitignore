@@ -3,3 +3,4 @@ _site-root/
 node_modules/
 .DS_Store
 _shots/
+_serve/

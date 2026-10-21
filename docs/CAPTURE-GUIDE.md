@@ -95,9 +95,6 @@ The session below groups shots by place in the game so you move around as little
    - `everyday/auto-refill` (clip), `everyday/loadouts` (clip), `everyday/xp-widget`.
    - `everyday/npc-dialogue`: talk to any NPC with options.
    - `everyday/price-history`: hover an item, press P.
-   - `bazaar/flips`, `bazaar/terminal`, `bazaar/replays`, `docs/bazaar/assistant-settings`: `/sm bazaar`.
-   - `bazaar/assistant-highlight` (clip), `bazaar/assistant-sign` (clip): guide one small flip.
-   - `bazaar/dashboard`: browser screenshot of `/sm bazaar dashboard`.
    - `everyday/sign-enter` (clip): an Auction House sign.
    - `everyday/stash`: open the stash.
 4. **Dungeon hub**

@@ -21,7 +21,7 @@ contradicts `LICENSE`, and both authors in one string.
 -	},
 -	"license": "CC0-1.0",
 +	"name": "SkyMyce",
-+	"description": "A client-side Fabric mod for Hypixel SkyBlock: dungeon tools, tracking, a guided Bazaar workflow and a clean HUD.",
++	"description": "A client-side Fabric mod for Hypixel SkyBlock: dungeon tools, tracking and a clean HUD.",
 +	"authors": [
 +		"mycellium",
 +		"cessna808-star"

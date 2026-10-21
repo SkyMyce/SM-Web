@@ -18,12 +18,6 @@
   "tracker/journal-comparison": { "kind": "image", "aspect": "16:9", "alt": "Journal comparison against the community", "spec": "Screenshot. The journal comparison panel (requires a community connection)." },
   "tracker/splits": { "kind": "video", "aspect": "16:9", "alt": "Live dungeon splits with personal bests", "spec": "Clip, 8-10 s. Splits widget during a run, including a split being completed." },
 
-  "bazaar/flips": { "kind": "image", "aspect": "16:9", "alt": "Flips tab with Steady, Balanced and Bold profiles", "spec": "Screenshot. /sm bazaar Flips tab with cards and the profile selector." },
-  "bazaar/terminal": { "kind": "image", "aspect": "16:9", "alt": "Bazaar terminal with Positions tab", "spec": "Screenshot. The terminal with the four summary tiles and Positions tab." },
-  "bazaar/assistant-highlight": { "kind": "video", "aspect": "16:9", "alt": "Bazaar Assistant highlighting the one button to click", "spec": "Clip, 8-10 s. Assistant panel beside a Bazaar menu, highlight gliding to the next button, player clicking it." },
-  "bazaar/assistant-sign": { "kind": "video", "aspect": "16:9", "alt": "Sign helper turning green when the typed value matches", "spec": "Clip, 6-8 s. Typing an amount on a Bazaar sign until the helper turns green, then clicking Done." },
-  "bazaar/replays": { "kind": "image", "aspect": "16:9", "alt": "Replays tab with private session recordings", "spec": "Screenshot. Replays tab with at least one session." },
-  "bazaar/dashboard": { "kind": "image", "aspect": "16:9", "alt": "Private browser dashboard on this computer", "spec": "Browser screenshot, 1920x1080. /sm bazaar dashboard page." },
 
   "everyday/digest": { "kind": "image", "aspect": "16:9", "alt": "Daily Digest with news, mayor and dailies", "spec": "Screenshot. /sm digest main view." },
   "everyday/auto-refill": { "kind": "video", "aspect": "16:9", "alt": "Auto Refill topping up a consumable from the sack", "spec": "Clip, 5-6 s. Use the last item of a stack and show it refilled." },
@@ -48,7 +42,6 @@
   "docs/goldor/map": { "kind": "image", "aspect": "16:9", "alt": "Goldor Map widget in the HUD editor", "spec": "Screenshot. HUD editor with the Goldor Map widget preview." },
   "docs/goldor/guide": { "kind": "image", "aspect": "16:9", "alt": "Goldor step guide in chat", "spec": "Screenshot. Output of /sm goldor guide for one class and section." },
   "docs/tracker/filters": { "kind": "image", "aspect": "16:9", "alt": "Tracker filters for floor, mode and dates", "spec": "Screenshot. Tracker with the filter controls open." },
-  "docs/bazaar/assistant-settings": { "kind": "image", "aspect": "16:9", "alt": "Bazaar Assistant settings card", "spec": "Screenshot. More tab, Bazaar Assistant card and highlight preview." },
   "docs/everyday/bars-editor": { "kind": "image", "aspect": "16:9", "alt": "Status bars editor with snapping guides", "spec": "Screenshot. /sm bars with guides visible while dragging." },
   "docs/community/connect": { "kind": "image", "aspect": "16:9", "alt": "Community screen with the Discord connection and sharing setting", "spec": "Screenshot. /sm community, connected, with Community data sharing visible. Hide Discord name if preferred." },
   "docs/cosmetics/studio": { "kind": "image", "aspect": "16:9", "alt": "Cosmetics Studio with name, size and cape", "spec": "Screenshot. /sm cosmetics with the player preview." },

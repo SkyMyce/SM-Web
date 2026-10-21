@@ -24,12 +24,13 @@ only when the live API is enabled.
 
 ## Design language
 
-Dark, airy and image-led, after the pacing of fourmula.ai: a near-black base, large rounded panels as sections,
-regular-weight giant headlines in the system sans stack, pill buttons and a floating pill menu with a scroll
-percentage. The home page opens with a tile grid (the HUD rebuilt in HTML plus draft illustrations), four area
-panels, a pinned statement list, four numbered install steps on saturated gradients, and an FAQ. Illustrations in
-`src/assets/img/draft/` are placeholders until real captures land in `src/assets/media/`. All styling lives in
-`src/assets/css/site.css`, tokens first.
+Light and sky-coloured, after the pacing of supaste.com: a hero that runs from deep indigo to pale sky and fades
+into a white page, heavy tight headlines in the system sans stack with one italic serif line, pill buttons and a
+floating glass menu with a scroll percentage. Each area has a tint and an accent (Dungeons ember, Tracker azure,
+Everyday leaf, Community violet) used for its panels, labels and page head. The home page opens with the HUD
+rebuilt in HTML over a draft sky-islands illustration, then three tinted area panels, four numbered install steps,
+an FAQ and a closing sky band. Illustrations in `src/assets/img/draft/` are placeholders until real captures land
+in `src/assets/media/`. All styling lives in `src/assets/css/site.css`, tokens first.
 
 ## Quick start
 

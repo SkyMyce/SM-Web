@@ -70,7 +70,7 @@ function mediaSlot(id, extraClass = "") {
 
 // ---------- layout ----------
 const NAV = [
-  ["dungeons", "Dungeons", "~/dungeons/"], ["tracker", "Tracker", "~/tracker/"], ["bazaar", "Bazaar", "~/bazaar/"],
+  ["dungeons", "Dungeons", "~/dungeons/"], ["tracker", "Tracker", "~/tracker/"],
   ["everyday", "Everyday", "~/everyday/"], ["docs", "Docs", "~/docs/"], ["community", "Community", "~/community/"],
 ];
 const MARK = `<svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="~/assets/img/mark.svg#mark"></use></svg>`;
@@ -97,7 +97,7 @@ function footer() {
   <div class="site-footer__inner">
     <div class="site-footer__brand"><a class="brand" href="~/" aria-label="SkyMyce home">${MARK}<span>SkyMyce</span></a><p>A client-side Fabric mod for Hypixel SkyBlock. Local features work without Discord.</p></div>
     <nav class="site-footer__cols" aria-label="Footer">
-      <div><h2>Product</h2><ul><li><a href="~/dungeons/">Dungeons</a></li><li><a href="~/tracker/">Tracker</a></li><li><a href="~/bazaar/">Bazaar</a></li><li><a href="~/everyday/">Everyday</a></li><li><a href="~/download/">Download</a></li></ul></div>
+      <div><h2>Product</h2><ul><li><a href="~/dungeons/">Dungeons</a></li><li><a href="~/tracker/">Tracker</a></li><li><a href="~/everyday/">Everyday</a></li><li><a href="~/download/">Download</a></li></ul></div>
       <div><h2>Docs</h2><ul><li><a href="~/docs/getting-started/">Getting started</a></li><li><a href="~/docs/install/">Install &amp; troubleshooting</a></li><li><a href="~/docs/commands/">Commands</a></li><li><a href="~/docs/faq/">FAQ</a></li></ul></div>
       <div><h2>Community</h2><ul><li><a href="~/community/leaderboards/">Leaderboards</a></li><li><a href="~/community/chat/">Global Chat</a></li><li><a href="~/community/cosmetics/">Cosmetics</a></li>${discord}${social}</ul></div>
       <div><h2>Trust</h2><ul><li><a href="~/privacy/">Privacy</a></li><li><a href="~/changelog/">Changelog</a></li>${config.features.status ? '<li><a href="~/status/">Status</a></li>' : ""}<li><a href="${esc(config.github.repo)}" rel="noopener" target="_blank">Source on GitHub</a></li></ul></div>
@@ -126,8 +126,8 @@ function head(meta, urlPath) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(meta.description)}">
 ${noindex}<link rel="canonical" href="${esc(canonical)}">
-<meta name="theme-color" content="#050507">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
 <meta property="og:type" content="website"><meta property="og:site_name" content="SkyMyce"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(meta.description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="SkyMyce: a client-side Fabric mod for Hypixel SkyBlock">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(meta.description)}"><meta name="twitter:image" content="${og}">
 <link rel="icon" href="~/assets/img/favicon.svg" type="image/svg+xml"><link rel="icon" href="~/assets/img/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="~/assets/img/apple-touch-icon.png"><link rel="manifest" href="~/manifest.webmanifest">
@@ -250,7 +250,7 @@ await writeFile(join(OUT, ".nojekyll"), "");
 if (config.customDomain) await writeFile(join(OUT, "CNAME"), config.customDomain + "\n");
 await writeFile(join(OUT, "manifest.webmanifest"), JSON.stringify({
   name: "SkyMyce", short_name: "SkyMyce", description: "A client-side Fabric mod for Hypixel SkyBlock.",
-  start_url: "./", scope: "./", display: "browser", background_color: "#050507", theme_color: "#050507",
+  start_url: "./", scope: "./", display: "browser", background_color: "#ffffff", theme_color: "#1b2fd6",
   icons: [{ src: "assets/img/icon-192.png", sizes: "192x192", type: "image/png" }, { src: "assets/img/icon-512.png", sizes: "512x512", type: "image/png" },
     { src: "assets/img/favicon.svg", sizes: "any", type: "image/svg+xml" }],
 }, null, 2));

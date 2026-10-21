@@ -53,20 +53,12 @@ if (!sda && reveals.length) {
   }
 }
 
-// ---------- Scroll-scrubbed pins + parallax fallback (one rAF loop, transform/opacity only) ----------
-const pins = [...document.querySelectorAll("[data-pin]")];
+// ---------- Parallax fallback (one rAF loop, transform only) ----------
 const parallax = sda ? [] : [...document.querySelectorAll(".parallax")];
 let ticking = false;
 function frame() {
   ticking = false;
   const vh = innerHeight;
-  for (const pin of pins) {
-    const rect = pin.getBoundingClientRect();
-    if (rect.bottom < 0 || rect.top > vh) continue;
-    const span = Math.max(1, rect.height - vh);
-    const p = Math.min(1, Math.max(0, -rect.top / (span * .8)));
-    pin.style.setProperty("--p", p.toFixed(4));
-  }
   for (const node of parallax) {
     const rect = node.getBoundingClientRect();
     if (rect.bottom < -200 || rect.top > vh + 200) continue;
@@ -74,8 +66,7 @@ function frame() {
     node.style.setProperty("--parallax-y", `${(-t * 60).toFixed(1)}px`);
   }
 }
-if (!reducedMotion() && (pins.length || parallax.length)) {
-  pins.forEach(pin => pin.style.setProperty("--p", "0"));
+if (!reducedMotion() && parallax.length) {
   addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
   addEventListener("resize", frame, { passive: true });
   frame();
