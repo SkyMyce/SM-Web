@@ -72,7 +72,7 @@ If an MP4 is over budget, raise `-crf` to 28-30, or shorten it.
 
 ## Repository size
 
-GitHub Pages sites should stay under 1 GB and individual files under 100 MB. With the budgets above, all 46
+GitHub Pages sites should stay under 1 GB and individual files under 100 MB. With the budgets above, all 48
 slots together stay under roughly 120 MB. Don't commit raw recordings; keep them outside the repository.
 
 ## Shot list, ordered for one session

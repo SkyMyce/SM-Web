@@ -1,6 +1,6 @@
 <!--meta {"title": "SkyMyce", "description": "SkyMyce is a client-side Fabric mod for Hypixel SkyBlock: dungeon tools, run and RNG tracking and a HUD you arrange yourself. It says what's next and leaves every click to you.", "nav": "home", "page": "home"} -->
 <section class="hero" aria-labelledby="hero-title">
-  <img class="hero__islands" src="~/assets/img/draft/sky-islands.svg" alt="" width="2400" height="900" aria-hidden="true">
+  <img class="hero__bg" src="~/assets/media/home/dungeon-hub.webp" alt="" width="1865" height="1048" aria-hidden="true">
   <div class="wrap hero__copy">
     <p class="hero__kicker">A client-side Fabric mod for Hypixel SkyBlock</p>
     <h1 class="hero__title" id="hero-title"><span>Reads the run.</span> <em>Never plays it.</em></h1>
@@ -9,41 +9,8 @@
     <ul class="hero__facts" aria-label="Key facts"><li>Free</li><li>Fabric, Java {{requirements.java}}</li><li>No account needed</li><li>Every feature is a switch</li></ul>
   </div>
   <div class="hero__shot">
-    <div class="hud-scene" aria-hidden="true">
-      <div class="hud-scene__world"><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="hud-crosshair"></div>
-      <div class="hud-panel hud-tracker">
-        <p class="t">M7 Dungeon Tracker</p>
-        <p class="d">/skymyce dungeon</p>
-        <p>&nbsp;</p>
-        <p><span class="m">Time: </span><span class="y">1h</span><span class="m"> (</span><span class="y">6m</span><span class="m">/run)</span></p>
-        <p><span class="m">Runs: </span><span class="g">10</span><span class="m"> (</span><span class="g">10</span><span class="m">/h)</span></p>
-        <p><span class="m">Chests: </span><span class="g">10</span><span class="m"> (</span><span class="b">2 rerolls</span><span class="m">)</span></p>
-        <p><span class="m">Profit: ~12M (12M/h)</span></p>
-        <p><span class="m">Cata Exp: </span><span class="b">400k </span><span class="m">(</span><span class="b">400k</span><span class="m">/h)</span></p>
-      </div>
-      <div class="hud-panel hud-side">
-        <p class="t">Goldor · Mage</p>
-        <p><span class="g">Done </span><span class="w">Terminal 2</span></p>
-        <p><span class="y">Next </span><span class="w">Terminal 3</span></p>
-        <p><span class="m">Pre-leap in </span><span class="b">4s</span></p>
-      </div>
-      <div class="hud-panel hud-ability"><span class="g">Ability Ready!</span></div>
-      <div class="hud-panel hud-xp">
-        <div class="hud-xp__icon"></div>
-        <div><p><span class="b">+3,140 </span><span class="w">Combat XP</span><span class="m"> (</span><span class="w">86%</span><span class="m">)</span></p><div class="hud-xp__bar"><span></span></div></div>
-      </div>
-      <div class="hud-bars">
-        <div class="hud-bar hud-bar--health"><span></span><b>❤ 3,820 / 4,250</b></div>
-        <div class="hud-bar hud-bar--mana"><span></span><b>✎ 1,840 / 2,400</b></div>
-      </div>
-      <div class="hud-bars hud-bars--side hud-bars--right">
-        <div class="hud-bar hud-bar--defense"><span></span><b>❈ 1,262</b></div>
-        <div class="hud-bar hud-bar--speed"><span></span><b>✦ 400</b></div>
-      </div>
-      <div class="hud-hotbar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    </div>
-    <span class="hero__shot-note">HUD rebuilt in HTML from the mod's Signature theme</span>
+    <img src="~/assets/media/home/hero.webp" alt="SkyMyce in the Dungeon Hub: the Dungeon Tracker, Recent RNG and performance widgets, with status bars around the hotbar" width="1873" height="1046" fetchpriority="high">
+    <span class="hero__shot-note">In-game screenshot</span>
   </div>
 </section>
 
@@ -63,8 +30,8 @@
         <p>Party matching, missing-player alerts, chest reroll protection, routing, the Crush Camera and per-class Goldor steps.</p>
         <span class="panel__cta">See the dungeon tools</span>
         <div class="panel__media">
-          <img src="~/assets/img/draft/party-finder.svg" alt="Draft illustration of the Party Finder with matching and mismatched listings marked" width="1600" height="1000" loading="lazy">
-          <img src="~/assets/img/draft/goldor-map.svg" alt="Draft illustration of the Goldor terminal map with class steps and a pre-leap countdown" width="1600" height="1000" loading="lazy">
+          <img src="~/assets/media/dungeons/party-finder.webp" alt="Dungeon Friends in the Party Finder with status, class levels and PBs" width="1862" height="1045" loading="lazy">
+          <img class="is-contain" src="~/assets/media/dungeons/goldor-map.webp" alt="Goldor Map widget with terminal states, party positions and the next leap" width="379" height="476" loading="lazy">
         </div>
       </a>
       <a class="panel panel--azure reveal" href="~/tracker/">
@@ -72,17 +39,16 @@
         <h3>Every run, every drop, kept.</h3>
         <p>Run history, loot, an RNG journal, live splits and Catacombs and class progress toward the level you choose.</p>
         <span class="panel__cta">See the tracker</span>
-        <div class="panel__media"><img src="~/assets/img/draft/dungeon-tracker.svg" alt="Draft illustration of the Dungeon Tracker widget over a dungeon corridor" width="1600" height="1000" loading="lazy"></div>
+        <div class="panel__media"><img src="~/assets/media/tracker/overview.webp" alt="Dungeon Tracker overview with runs, estimated profit, time and Catacombs XP" width="2000" height="1202" loading="lazy"></div>
       </a>
       <a class="panel panel--leaf reveal" href="~/everyday/">
         <p class="label">Everyday</p>
         <h3>The small things, handled.</h3>
         <p>Daily Digest, Auto Refill, stash filtering, loadout keys, status bars, overlays and theme presets.</p>
         <span class="panel__cta">See the everyday helpers</span>
-        <div class="panel__media"><img src="~/assets/img/draft/status-bars.svg" alt="Draft illustration of health, mana, defense and speed bars arranged around the hotbar" width="1600" height="1000" loading="lazy"></div>
+        <div class="panel__media"><img src="~/assets/media/everyday/digest.webp" alt="Daily Digest with news, mayor, personal dailies and RNG activity" width="1869" height="1046" loading="lazy"></div>
       </a>
     </div>
-    <p class="illustration-note">Illustrations are drafts standing in for screenshots.</p>
   </div>
 </section>
 
@@ -131,7 +97,7 @@
           <div>
             <p>Nothing is forced on. Flip the switches you want, move widgets with <code>/sm hud</code>, and connect Discord only if you want chat, leaderboards or shared cosmetics.</p>
           </div>
-          <div class="step-xl__media"><img src="~/assets/img/draft/sm-menu.svg" alt="Draft illustration of the /sm menu with feature switches" width="1600" height="1000" loading="lazy"></div>
+          <div class="step-xl__media"><img src="~/assets/media/download/first-launch.webp" alt="The /sm home screen with your tools and categories" width="1865" height="1047" loading="lazy"></div>
         </div>
       </li>
     </ol>

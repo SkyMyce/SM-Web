@@ -27,10 +27,10 @@ only when the live API is enabled.
 Light and sky-coloured, after the pacing of supaste.com: a hero that runs from deep indigo to pale sky and fades
 into a white page, heavy tight headlines in the system sans stack with one italic serif line, pill buttons and a
 floating glass menu with a scroll percentage. Each area has a tint and an accent (Dungeons ember, Tracker azure,
-Everyday leaf, Community violet) used for its panels, labels and page head. The home page opens with the HUD
-rebuilt in HTML over a draft sky-islands illustration, then three tinted area panels, four numbered install steps,
-an FAQ and a closing sky band. Illustrations in `src/assets/img/draft/` are placeholders until real captures land
-in `src/assets/media/`. All styling lives in `src/assets/css/site.css`, tokens first.
+Everyday leaf, Community violet) used for its panels, labels and page head. The home page opens with an in-game
+screenshot over a blue-tinted Dungeon Hub panorama, then three tinted area panels, four numbered install steps, an
+FAQ and a closing sky band. Screenshots live in `src/assets/media/`; the one remaining draft illustration
+(`src/assets/img/draft/mods-folder.svg`) stands in until a mods-folder capture lands. All styling lives in `src/assets/css/site.css`, tokens first.
 
 ## Quick start
 
