@@ -5,6 +5,9 @@ Every screenshot and clip on the site lives in a **media slot**. Each slot is de
 shows a "Capture pending" card naming the expected file. The build checks which files exist, so there are
 no broken requests.
 
+The ordered list of every shot, including the home-page assets outside the slot system, is in
+[SHOT-LIST.md](SHOT-LIST.md).
+
 ```bash
 node tools/media-audit.mjs              # every slot, present or missing, with file sizes
 node tools/media-audit.mjs --missing    # only what still needs capturing
@@ -69,7 +72,7 @@ If an MP4 is over budget, raise `-crf` to 28-30, or shorten it.
 
 ## Repository size
 
-GitHub Pages sites should stay under 1 GB and individual files under 100 MB. With the budgets above, all 53
+GitHub Pages sites should stay under 1 GB and individual files under 100 MB. With the budgets above, all 46
 slots together stay under roughly 120 MB. Don't commit raw recordings; keep them outside the repository.
 
 ## Shot list, ordered for one session
