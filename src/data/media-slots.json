@@ -23,7 +23,7 @@
   "everyday/stash": { "kind": "image", "aspect": "1:1", "alt": "Stash value filter marking low-value items", "spec": "Screenshot. Stash menu with low-value items marked." },
   "everyday/loadouts": { "kind": "video", "aspect": "16:9", "alt": "Swapping equipment loadouts with a key", "spec": "Clip, 5-6 s. Press a loadout key and show the swap." },
   "everyday/status-bars": { "kind": "video", "aspect": "16:9", "alt": "Status bars arranged around the hotbar", "spec": "Clip, 8-10 s. /sm bars editor: drag a bar, snap it, then show it in game." },
-  "everyday/npc-dialogue": { "kind": "image", "aspect": "16:9", "alt": "NPC dialogue box with numbered options", "spec": "Screenshot. An NPC conversation with numbered options." },
+  "everyday/npc-dialogue": { "kind": "video", "aspect": "16:9", "alt": "NPC dialogue shown in a SkyMyce dialogue box", "spec": "Clip, 9 s. Talk to an NPC and read the dialogue box." },
   "everyday/sign-enter": { "kind": "video", "aspect": "16:9", "alt": "Pressing Enter to finish an Auction House sign", "spec": "Clip, 4-5 s. Type a price on an Auction House sign and press Enter." },
   "everyday/xp-widget": { "kind": "image", "aspect": "4:3", "alt": "Skill XP widget with progress bar", "spec": "Screenshot crop, 1200x900. Skill XP widget after an XP gain." },
   "everyday/themes": { "kind": "image", "aspect": "16:9", "alt": "Theme presets in Appearance settings", "spec": "Screenshot. Settings, Appearance, with the theme preset list." },
@@ -49,7 +49,7 @@
   "docs/graphics/modes": { "kind": "image", "aspect": "auto", "alt": "Graphics Auto reporting a switch to Medium in chat", "spec": "Screenshot crop. Chat after Graphics Auto picks a mode." },
   "docs/faq/logs": { "kind": "image", "aspect": "16:9", "alt": "The logs folder inside a launcher instance", "spec": "Screenshot. File explorer showing the instance logs folder." },
 
-  "community/studio": { "kind": "image", "aspect": "16:9", "alt": "Cosmetics Studio in game", "spec": "Screenshot. /sm cosmetics with a custom name and cape." },
+  "community/studio": { "kind": "video", "aspect": "16:9", "alt": "Cosmetics Studio resizing the player model with a live preview", "spec": "Clip, 8 s. /sm cosmetics while dragging the body scale sliders." },
   "community/chat-in-game": { "kind": "image", "aspect": "16:9", "alt": "Global Chat in game with replies and reactions", "spec": "Screenshot. /sm irc with a reply and a reaction visible. Use consenting players only." },
   "community/leaderboard-in-game": { "kind": "image", "aspect": "16:9", "alt": "In-game leaderboard with coverage notes", "spec": "Screenshot. /sm leaderboard showing a category, period and the coverage line." }
 }

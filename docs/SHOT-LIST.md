@@ -37,10 +37,10 @@ pages and the download page, so do those before the `docs/` and `community/` slo
 - [x] **dungeons/party-finder** (image, 16:9): Screenshot. /sm pf with dungeon friends listed. → `src/assets/media/dungeons/party-finder.webp`
 - [ ] **dungeons/missing-player** (image, 16:9): Screenshot. The alert shown when a party member has not entered the instance. → `src/assets/media/dungeons/missing-player.webp`
 - [ ] **dungeons/requeue** (video, 16:9): Clip, 6-8 s. End of a run through the requeue into the next instance. → `src/assets/media/dungeons/requeue.mp4 + dungeons/requeue.webm + poster dungeons/requeue.jpg`
-- [ ] **dungeons/chest-protection** (video, 16:9): Clip, 5-8 s. Click the reroll button on a chest holding a valuable item and show the block message. → `src/assets/media/dungeons/chest-protection.mp4 + dungeons/chest-protection.webm + poster dungeons/chest-protection.jpg`
+- [x] **dungeons/chest-protection** (video, 16:9): Clip, 5-8 s. Click the reroll button on a chest holding a valuable item and show the block message. → `src/assets/media/dungeons/chest-protection.mp4 + dungeons/chest-protection.webm + poster dungeons/chest-protection.jpg`
 - [ ] **dungeons/chest-profit** (image, 16:9): Screenshot. Croesus or the reward chest room with profit estimates visible. → `src/assets/media/dungeons/chest-profit.webp`
 - [ ] **dungeons/win-screen** (image, 16:9): Screenshot. The post-run summary overlay right after a completed run. → `src/assets/media/dungeons/win-screen.webp`
-- [ ] **dungeons/routing** (video, 16:9): Clip, 8-10 s. Walk two rooms following the route line on a class that has Blood routing enabled. → `src/assets/media/dungeons/routing.mp4 + dungeons/routing.webm + poster dungeons/routing.jpg`
+- [x] **dungeons/routing** (video, 16:9): Clip, 8-10 s. Walk two rooms following the route line on a class that has Blood routing enabled. → `src/assets/media/dungeons/routing.mp4 + dungeons/routing.webm + poster dungeons/routing.jpg`
 - [ ] **dungeons/crush-camera** (video, 16:9): Clip, 8-12 s. The preview in /sm crush-camera, or a live Storm phase with the camera switching. → `src/assets/media/dungeons/crush-camera.mp4 + dungeons/crush-camera.webm + poster dungeons/crush-camera.jpg`
 - [x] **dungeons/goldor-map** (image, auto): Screenshot crop. The Goldor Map widget during F7/M7 phase 3. → `src/assets/media/dungeons/goldor-map.webp`
 - [ ] **dungeons/leap-menu** (image, 16:9): Screenshot. The Spirit Leap menu open with teammates listed. → `src/assets/media/dungeons/leap-menu.webp`
@@ -58,12 +58,12 @@ pages and the download page, so do those before the `docs/` and `community/` slo
 ## everyday
 
 - [x] **everyday/digest** (image, 16:9): Screenshot. /sm digest main view. → `src/assets/media/everyday/digest.webp`
-- [ ] **everyday/auto-refill** (video, 16:9): Clip, 5-6 s. Use the last item of a stack and show it refilled. → `src/assets/media/everyday/auto-refill.mp4 + everyday/auto-refill.webm + poster everyday/auto-refill.jpg`
+- [x] **everyday/auto-refill** (video, 16:9): Clip, 5-6 s. Use the last item of a stack and show it refilled. → `src/assets/media/everyday/auto-refill.mp4 + everyday/auto-refill.webm + poster everyday/auto-refill.jpg`
 - [x] **everyday/stash** (image, 1:1): Screenshot. Stash menu with low-value items marked. → `src/assets/media/everyday/stash.webp`
-- [ ] **everyday/loadouts** (video, 16:9): Clip, 5-6 s. Press a loadout key and show the swap. → `src/assets/media/everyday/loadouts.mp4 + everyday/loadouts.webm + poster everyday/loadouts.jpg`
-- [ ] **everyday/status-bars** (video, 16:9): Clip, 8-10 s. /sm bars editor: drag a bar, snap it, then show it in game. → `src/assets/media/everyday/status-bars.mp4 + everyday/status-bars.webm + poster everyday/status-bars.jpg`
-- [ ] **everyday/npc-dialogue** (image, 16:9): Screenshot. An NPC conversation with numbered options. → `src/assets/media/everyday/npc-dialogue.webp`
-- [ ] **everyday/sign-enter** (video, 16:9): Clip, 4-5 s. Type a price on an Auction House sign and press Enter. → `src/assets/media/everyday/sign-enter.mp4 + everyday/sign-enter.webm + poster everyday/sign-enter.jpg`
+- [x] **everyday/loadouts** (video, 16:9): Clip, 5-6 s. Press a loadout key and show the swap. → `src/assets/media/everyday/loadouts.mp4 + everyday/loadouts.webm + poster everyday/loadouts.jpg`
+- [x] **everyday/status-bars** (video, 16:9): Clip, 8-10 s. /sm bars editor: drag a bar, snap it, then show it in game. → `src/assets/media/everyday/status-bars.mp4 + everyday/status-bars.webm + poster everyday/status-bars.jpg`
+- [x] **everyday/npc-dialogue** (video, 16:9): Clip, 9 s. Talk to an NPC and read the dialogue box. → `src/assets/media/everyday/npc-dialogue.mp4 + everyday/npc-dialogue.webm + poster everyday/npc-dialogue.jpg`
+- [x] **everyday/sign-enter** (video, 16:9): Clip, 4-5 s. Type a price on an Auction House sign and press Enter. → `src/assets/media/everyday/sign-enter.mp4 + everyday/sign-enter.webm + poster everyday/sign-enter.jpg`
 - [ ] **everyday/xp-widget** (image, 4:3): Screenshot crop, 1200x900. Skill XP widget after an XP gain. → `src/assets/media/everyday/xp-widget.webp`
 - [ ] **everyday/themes** (image, 16:9): Screenshot. Settings, Appearance, with the theme preset list. → `src/assets/media/everyday/themes.webp`
 - [x] **everyday/price-history** (image, 16:9): Screenshot. Hover an item, press P, graph visible. → `src/assets/media/everyday/price-history.webp`
@@ -112,7 +112,7 @@ pages and the download page, so do those before the `docs/` and `community/` slo
 
 ## docs/cosmetics
 
-- [ ] **docs/cosmetics/studio** (image, 16:9): Screenshot. /sm cosmetics with the player preview. → `src/assets/media/docs/cosmetics/studio.webp`
+- [x] **docs/cosmetics/studio** (image, 16:9): Screenshot. /sm cosmetics with the player preview. → `src/assets/media/docs/cosmetics/studio.webp`
 
 ## docs/graphics
 
@@ -124,7 +124,7 @@ pages and the download page, so do those before the `docs/` and `community/` slo
 
 ## community
 
-- [ ] **community/studio** (image, 16:9): Screenshot. /sm cosmetics with a custom name and cape. → `src/assets/media/community/studio.webp`
+- [x] **community/studio** (video, 16:9): Clip, 8 s. /sm cosmetics while dragging the body scale sliders. → `src/assets/media/community/studio.mp4 + community/studio.webm + poster community/studio.jpg`
 - [ ] **community/chat-in-game** (image, 16:9): Screenshot. /sm irc with a reply and a reaction visible. Use consenting players only. → `src/assets/media/community/chat-in-game.webp`
 - [x] **community/leaderboard-in-game** (image, 16:9): Screenshot. /sm leaderboard showing a category, period and the coverage line. → `src/assets/media/community/leaderboard-in-game.webp`
 
