@@ -43,8 +43,8 @@ await shot("og.png", 1200, 630, `<div style="width:1200px;height:630px;box-sizin
   background:linear-gradient(180deg,#1b2fd6 0%,#2d7cf6 55%,#8fd3ff 100%);
   font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Roboto,system-ui,sans-serif;color:#fff">
   <div style="display:flex;align-items:center;gap:22px"><div style="width:72px;height:72px">${svg}</div><div style="font-size:44px;font-weight:700;letter-spacing:-1.5px">SkyMyce</div></div>
-  <div><div style="font-size:112px;font-weight:800;letter-spacing:-6px;line-height:.95">Reads the run.</div>
-  <div style="font-size:112px;font-style:italic;font-weight:400;letter-spacing:-2px;line-height:.95;font-family:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif">Never plays it.</div>
+  <div><div style="font-size:88px;font-weight:800;letter-spacing:-6px;line-height:.95">Hypixel SkyBlock tools</div>
+  <div style="font-size:88px;font-style:italic;font-weight:400;letter-spacing:-2px;line-height:.95;font-family:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif">that never play for you</div>
   <div style="margin-top:30px;font-size:30px;color:rgba(255,255,255,.9);max-width:900px">A client-side Fabric mod for Hypixel SkyBlock. Dungeon tools, run tracking and a HUD you arrange yourself.</div></div></div>`);
 ws.close(); proc.kill();
 console.log("Wrote favicon-32.png, apple-touch-icon.png, icon-192.png, icon-512.png and og.png");
