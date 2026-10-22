@@ -104,7 +104,7 @@ pages and the download page, so do those before the `docs/` and `community/` slo
 
 ## docs/everyday
 
-- [ ] **docs/everyday/bars-editor** (image, 16:9): Screenshot. /sm bars with guides visible while dragging. → `src/assets/media/docs/everyday/bars-editor.webp`
+- [x] **docs/everyday/bars-editor** (image, 16:9): Screenshot. /sm bars with guides visible while dragging. → `src/assets/media/docs/everyday/bars-editor.webp`
 
 ## docs/community
 
